@@ -70,6 +70,7 @@ header {
   color: #f7f8fb;
   padding: 15px;
 }
+
 .pagination {
   display: inline-block;
 }
@@ -89,7 +90,9 @@ header {
   border: 1px solid var(--bs-secondary);
 }
 
-.pagination a:hover:not(.active) {background-color: var(--bs-primary)}
+.pagination a:hover:not(.active) {
+  background-color: var(--bs-primary)
+}
 
 .nav.nav-tabs .nav-link.active {
   border-bottom: 2px solid var(--bs-secondary) !important;
@@ -132,14 +135,16 @@ header {
 }
 
 .box {
-  
+
   /* box-shadow: 0px; */
   padding: 20px;
 
 }
-.box img{
+
+.box img {
   width: 90%;
 }
+
 .card h1 {
   font-size: 20px;
   background-color: rgba(67, 81, 93, 0);
@@ -310,12 +315,12 @@ div#slider {
   overflow: hidden;
 }
 
-/* div#slider figure img { */
+div#slider figure img {
   /* width: 13%; */
-  /* margin-top: 2%;
+  margin-top: 2%;
   width: 20%;
   float: left;
-} */
+}
 
 div#slider figure {
   position: relative;
@@ -336,7 +341,7 @@ div#slider figure {
   position: absolute;
   bottom: 0;
 
-  animation: indicating 6s ease ;
+  animation: indicating 6s ease;
 
 }
 
@@ -402,11 +407,11 @@ div#slider figure {
 }
 
 
-/* Media query for small screens (up to 360px wide) */
+/* Media query for small screens (up to 360px wide)
 @media (max-width: 360px) {
 
   /* Adjust styles for small screens */
-    .auto-slider { 
+/* .auto-slider { 
     border-top: 4px solid black;
     border: 2px solid black;
     position: relative; 
@@ -420,23 +425,15 @@ div#slider figure {
     box-shadow: 0px 0px 20px rgb(25, 0, 255);
     background-repeat: no-repeat;
     /* height: ; */
-    max-width: 100%;
+/* max-width: 100%;
     max-height: 8vmin;
-    min-width: 10%; 
+    min-width: 100%; 
     /* margin: */
-    overflow: hidden;
+/* overflow: hidden;
     border-radius: 4px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4); 
-  }
-  div#slider figure img {
-    /* width: 13%; */
-    margin-top: 1vw;
-    width: 41vw;
-    max-height:30vmax;
-    /* min-width: vmax; */
-    float: left;
-  }
-}
+  } */
+/* } */
 
 /* Media query for medium screens (361px to 800px wide)*/
 @media (min-width: 361px) and (max-width: 800px) {
@@ -448,14 +445,14 @@ div#slider figure {
     display: inline-block;
     padding: 10px 0px;
 
-  /* background: #ffffff; */
+    /* background: #ffffff; */
     background-image: url("wal3.png");
     background-size: 100% 100%;
     box-shadow: 0px 0px 20px rgb(25, 0, 255);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     max-height: 8vmin;
-    min-width: 9vmax; 
+    min-width: 9vmax;
     /* margin: ;  */
     overflow: hidden;
     border-radius: 4px;
@@ -464,12 +461,18 @@ div#slider figure {
 
   div#slider figure img {
     /* width: 13%; */
-    margin-top: 1vw;
-    width: 40vw;
-    max-height:30vmax;
-    min-width: 60vmax;
+    margin-top: 2vw;
+    margin-left: 2%;
+    /* margin-bottom: 1%; */
+    /* max-height: 8vmin;*/
+    /* max-width: 100%; */
+    min-height: 30vmax;
+    max-width: 95vw;
+    max-height: 5vmin;
+    /* height: 10%; */
     float: left;
   }
+
   /* .indicator {
     width: 100%;
     max-width: 100%;
@@ -482,31 +485,31 @@ div#slider figure {
   
   }
    */
-   @keyframes sliding {
+  @keyframes sliding {
     0% {
       /* left: 0%; */
     }
-  
+
     20% {
-      left: -175%;
+      left: -350%;
     }
-  
+
     40% {
       /* left: -200%; */
     }
-  
+
     60% {
       /* left: -300%; */
     }
-  
+
     80% {
       /* left: -400%; */
     }
-  
+
     100% {
       /* left: 0%; */
     }
-}
+  }
 }
 
 /* Adjust styles for medium screens */
@@ -546,33 +549,35 @@ div#slider figure {
     width: 60vmin;
     float: left;
   }
+
   @keyframes sliding {
     0% {
       /* left: 0%; */
     }
-  
+
     20% {
-      left: -25%;
+      left: -15%;
     }
-  
+
     40% {
-      left: -50%;
+      /* left: -200%; */
     }
-  
+
     60% {
-      left: -75%;
+      /* left: -300%; */
     }
-  
+
     80% {
-      left: -100%;
+      /* left: -400%; */
     }
-  
+
     100% {
       /* left: 0%; */
     }
-  } 
+  }
 }
-  /* .indicator {
+
+/* .indicator {
     width: 100%;
     max-width: 100%;
     height: 6px;
@@ -582,7 +587,7 @@ div#slider figure {
   
     animation: indicating 5s ease infinite;
   */
-  
+
 
 
 /* Adjust styles for larger screens You may not need this specific query,
