@@ -70,6 +70,30 @@ header {
   color: #f7f8fb;
   padding: 15px;
 }
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: var(--bs-dark);
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: 0.5s;
+  border: 1px solid var(--bs-secondary);
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: var(--bs-primary);
+  color: var(--bs-light);
+  border: 1px solid var(--bs-secondary);
+}
+
+.pagination a:hover:not(.active) {background-color: var(--bs-primary)}
+
+.nav.nav-tabs .nav-link.active {
+  border-bottom: 2px solid var(--bs-secondary) !important;
+}
 
 /*Piche ka backgorund. */
 #content {
@@ -416,14 +440,14 @@ div#slider figure {
     display: inline-block;
     padding: 10px 0px;
 
-    background: #ffffff;
+  /* background: #ffffff; */
     background-image: url("wal3.png");
     background-size: 100% 100%;
     box-shadow: 0px 0px 20px rgb(25, 0, 255);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     max-height: 8vmin;
-    min-width: 90vmax;
+    min-width: 9vmax; 
     /* margin: ;  */
     overflow: hidden;
     border-radius: 4px;
@@ -432,13 +456,10 @@ div#slider figure {
 
   div#slider figure img {
     /* width: 13%; */
-    margin-top: 2vw;
-    margin-left: 2%;
-    /* margin-bottom: 1%; */
-    /* max-height: 8vmin;
-      max-width: 90vmax; */
-    width: 10%;
-    /* height: %; */
+    margin-top: 1vw;
+    width: 40vw;
+    max-height:30vmax;
+    min-width: 60vmax;
     float: left;
   }
   /* .indicator {
@@ -523,19 +544,19 @@ div#slider figure {
     }
   
     20% {
-      left: -15%;
+      left: -25%;
     }
   
     40% {
-      /* left: -200%; */
+      left: -50%;
     }
   
     60% {
-      /* left: -300%; */
+      left: -75%;
     }
   
     80% {
-      /* left: -400%; */
+      left: -100%;
     }
   
     100% {
