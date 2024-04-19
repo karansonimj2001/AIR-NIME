@@ -580,7 +580,8 @@ footer .Copyright {
 /* SHOP */
 #ShopBanner {
     background-image: url('Images/Banners/Shop\ Banner.jpg');
-    height: 60vh;
+    height: 30vmax;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -601,6 +602,8 @@ footer .Copyright {
 
 #Pagination {
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #Pagination a {
