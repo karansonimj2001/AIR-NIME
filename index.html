@@ -24,339 +24,2794 @@
             color: #333;
         }
     </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-    <section id="header">
-        <div class="logo-container">
-            <img src="Images/logo.png" alt="Website Logo">
-        </div>
+    <div id="sectionMain">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
 
-        <div>
-            <ul id="navbar">
-                <li><a class="active" href="index.html">home</a></li>
-                <li><a href="shop.html">shop</a></li>
-                <li><a href="blog.html">blog</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact.html">contact</a></li>
-                <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
-            </ul>
-        </div>
-    </section>
-    <section id="zoro">
-        <div class="d1"> Super Value Deals</div>
-        <div class="d2">On all Products </div>
-        <div class="d3">Save More With Coupons upto 70% off!</div>
-        <button class="normal" onclick="window.location.href='shop.html';">Shop Now</button>
-    </section>
-    <section class="auto-slider">
-        <div id="slider">
-          <figure>
-            <img src="Images/Feature Products/black clover logo.png" alt="Image">
-            <img src="Images/Feature Products/one piece logo.jpg" alt="Image">
-            <img src="Images/Feature Products/Naruto Logo.png" alt="Image">
-            <img src="Images/Feature Products/Solo Leveling Logo.jpg" alt="Image">
-            <img src="Images/Feature Products/Demon-Slayer-Logo.png" alt="Image">
-          </figure>
-          <div class="indicator"></div>
-        </div>
-      </section>
-    <!-- <section id="feature">
-        <div class="container">
-            <img src="Images/Feature Products/black clover logo.png" alt="Image 1">
-            <img src="Images/Feature Products/one piece logo.jpg" alt="Image 2">
-            <img src="Images/Feature Products/Naruto Logo.png" alt="Image 3">
-            <img src="Images/Feature Products/Solo Leveling Logo.jpg" alt="Image 4">
-            <img src="Images/Feature Products/Demon-Slayer-Logo.png" alt="Image 5">
-        </div>
+            <div>
+                <ul id="navbar">
+                    <li><a class="active" href="index.html">home</a></li>
+                    <li><a href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="zoro">
+            <div class="d1"> Super Value Deals</div>
+            <div class="d2">On all Products </div>
+            <div class="d3">Save More With Coupons upto 70% off!</div>
+            <button class="normal" onclick="window.location.href='shop.html';">Shop Now</button>
+        </section>
+        <section class="auto-slider">
+            <div id="slider">
+                <figure>
+                    <img src="Images/Feature Products/black clover logo.png" alt="Image">
+                    <img src="Images/Feature Products/one piece logo.jpg" alt="Image">
+                    <img src="Images/Feature Products/Naruto Logo.png" alt="Image">
+                    <img src="Images/Feature Products/Solo Leveling Logo.jpg" alt="Image">
+                    <img src="Images/Feature Products/Demon-Slayer-Logo.png" alt="Image">
+                </figure>
+                <div class="indicator"></div>
+            </div>
+        </section>
 
-    </section> -->
-    <section id="Products" class="section-p1">
-        <div class="f1" style="display: inline-block;"> Featured Products </div>
-        <p style="color: white;">Summer Collection</p>
-        <div class="pro-container">
-            <div class="pro" onclick="window.location.href='https://wa.me/919625670484?text=%22hello,%20I%20want%20to%20buy%20NARUTO%20https://www.airnime.in/NARUTO.jpg%22'">
-                <img src="Images/Products/Product naruto.jpg" alt="">
-                <div class="about">
-                    <span>Air-nime</span>
-                    <h5>Naruto T-Shirt</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+        <section id="Products" class="section-p1">
+            <div class="f1" style="display: inline-block;"> Featured Products </div>
+            <p style="color: white;">Summer Collection</p>
+            <div class="pro-container">
+                <div class="pro"  onclick="display('sectionNaruto')">
+                    <img src="Images/Products/Product naruto.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Naruto T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4v class="amount">₹799</h4>
                     </div>
-                    <h4v class="amount">₹999</h4>
+                    <div class="newprice">₹649/- Only</div>
+                    <i class="fas fa-shopping-cart shopping-cart-icon"></i>
                 </div>
-                <div class="newprice">₹799/- Only</div>
-                <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-            </div>
-            <div class="pro" onclick="window.location.href='https://wa.me/919625670484?text=%22hello%20i%20want%20to%20buy%20MARCO%20-%20THE%20PHOENIX%20https://www.airnime.in/marco2.jpg%22';">
-                <img src="Images/Products/Product Marco.jpg" alt="">
-                <div class="about">
-                    <span>Air-nime</span>
-                    <h5>Marco T-Shirt</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+
+                <div class="pro" onclick="display('sectionMarco')">
+                    <img src="Images/Products/Product Marco.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Marco T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4v class="amount">₹799</h4>
                     </div>
-                    <h4v class="amount">₹999</h4>
+                    <div class="newprice">₹649/- Only</div>
+                    <i class="fas fa-shopping-cart shopping-cart-icon"></i>
+
                 </div>
-                <div class="newprice">₹799/- Only</div>
-                <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-            </div>
-            <div class="pro" onclick="window.location.href='https://wa.me/919625670484?text=%22hello%20i%20want%20to%20buy%20MONKEY-%20D%20LUFFY%20ONE%20PIECE%20https://www.airnime.in/monkey.jpg%22'">
-                <img src="Images/Products/Product Luffy.jpg" alt="">
-                <div class="about">
-                    <span>Air-nime</span>
-                    <h5>Luffy T-Shirt</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                <div class="pro" onclick="display('sectionLuffy')">
+                    <img src="Images/Products/Product Luffy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4v class="amount">₹799</h4>
                     </div>
-                    <h4v class="amount">₹999</h4>
+                    <div class="newprice">₹649/- Only</div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
                 </div>
-                <div class="newprice">₹799/- Only</div>
-                <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-            </div>
-            <div class="pro" onclick="window.location.href='https://wa.me/919625670484?text=%22%20hello%20,%20I%20want%20to%20buy%20JOY%20BOY%20-%20ONE%20PIECE%20https://www.airnime.in/joyboy1.jpg%22'">
-                <img src="Images/Products/Product joyboy.jpg" alt="">
-                <div class="about">
-                    <span>Air-nime</span>
-                    <h5>Luffy Gear-5 T-Shirt</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                <div class="pro" onclick="display('sectionJoyboy')">
+                    <img src="Images/Products/Product joyboy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy Gear-5 T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4v class="amount">₹799</h4>
                     </div>
-                    <h4v class="amount">₹999</h4>
-                    </div>
-                    <div class="newprice">₹799/- Only</div>
-                <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-            </div>
-        </div>
-    </section>
-    <section id="Banner" class="section-m1">
-        <h2>Up to <span>40% off</span>- All T-Shirts and Action Figures</h2>
-        <button class="normal" onclick="window.location.href='shop.html';">Explore More</button>
-    </section>
-    <section id="Products" class="section-p1">
-        <h2 style="color:white; padding: 2px; font-size: 36px;"> Action Figures </h2>
-        <p style="color: white;">Summer Sale</p>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="Images/Action Figures/JJK ActionF.jpg" alt="Image-1">
-                <div class="about">
-                    <span>Air-nime</span>
-                    <h5>JJK (Pack of 5)</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <h4>Out Of Stock</h4>
+                    <div class="newprice">₹649/- Only</div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
             </div>
-            <div class="pro">
-                <img src="Images/Action Figures/Luffy ActionF.jpg" alt="image-2">
-                <div class="about">
-                    <span>Air-nime</span>
-                    <h5>Luffy Gear4 (Tankman)</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+        </section>
+        <section id="Banner" class="section-m1">
+            <h2>Up to <span>40% off</span>- All T-Shirts and Action Figures</h2>
+            <button class="normal" onclick="window.location.href='shop.html';">Explore More</button>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2 style="color:white; padding: 2px; font-size: 36px;"> Action Figures </h2>
+            <p style="color: white;">Summer Sale</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionJjk')">
+                    <img src="Images/Action Figures/JJK ActionF.jpg" alt="Image-1">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>JJK (Pack of 5)</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>Out Of Stock</h4>
                     </div>
-                    <h4>Out Of Stock</h4>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-            </div>
-            <div class="pro">
-                <img src="Images/Action Figures/Naruto Action.jpg" alt="image-3">
-                <div class="about">
-                    <span>Air-nime</span>
-                    <h5>Naruto</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                <div class="pro" onclick="display('sectionLuffyActionF')">
+                    <img src="Images/Action Figures/Luffy ActionF.jpg" alt="image-2">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy Gear4 (Tankman)</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>Out Of Stock</h4>
                     </div>
-                    <h4>Out Of Stock</h4>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-            </div>
-            <div class="pro" onclick="window.location.href='https://wa.me/919625670484?text=%22hello,%20I%20want%20to%20buy%20ZORO%20ACTION%20FIGURE%20%20https://www.airnime.in/Images/Action%20Figures/Zoro%20ActionF.jpg%22'">
-                <img src="Images/Action Figures/Zoro ActionF.jpg" alt="image-4">
-                <div class="about">
-                    <span>Air-nime</span>
-                    <h5>Zoro</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                <div class="pro" onclick="display('sectionNarutoAction')">
+                    <img src="Images/Action Figures/Naruto Action.jpg" alt="image-3">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Naruto</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4v class="amount">₹749</h4>
+                        </div>
+                        <div class="newprice">₹549/- Offer!!!</div>
+                    <a href=><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionZoroActionF')">
+                    <img src="Images/Action Figures/Zoro ActionF.jpg" alt="image-4">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Zoro</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4v class="amount">₹1699</h4>
                     </div>
-                    <h4v class="amount">₹1200</h4>
+                    <div class="newprice">₹1499/- Offer!!!</div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
                 </div>
-                <div class="newprice">₹999/- Offer!!!</div>
-                <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-            </div>
-            <div class="pro">
-                <img src="Images/Action Figures/Gear-5 Luffy.jpg" alt="image-5">
-                <div class="about">
-                    <span>Air-nime</span>
-                    <h5>Gear- 5 Luffy</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                <div class="pro" onclick="display('sectionGear5Luffy')">
+                    <img src="Images/Action Figures/Gear-5 Luffy.jpg" alt="image-5">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Gear- 5 Luffy</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4v class="amount">₹899</h4>
+                        </div>
+                        <div class="newprice">₹599/- Offer!!!</div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionzorowanoActionf')">
+                    <img src="Images/Action Figures/ZoroWano ActionF.jpeg" alt="image-6">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Zoro Wano</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4v class="amount">₹1199</h4>
+                        </div>
+                        <div class="newprice">₹899/- Offer!!!</div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionItachiActionF')">
+                    <img src="Images/Action Figures/Itachi ActionF.jpg" alt="image-7">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Itachi Uchiha</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4v class="amount">₹699</h4>
+                        </div>
+                        <div class="newprice">₹499/- Offer!!!</div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionKunaiActionF')">
+                    <img src="Images/Action Figures/Kunai ActionF.jpg" alt="image-8">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Kunai</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4v class="amount">₹399</h4>
                     </div>
-                    <h4>Out Of Stock</h4>
+                    <div class="newprice">₹249/- Offer!!!</div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
             </div>
-            <div class="pro">
-                <img src="Images/Action Figures/ZoroWano ActionF.jpeg" alt="image-6">
-                <div class="about">
-                    <span>Air-nime</span>
-                    <h5>Zoro Wano</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+        </section>
+        <h2 class="center" style="color: white;">Collections</h2>
+        <section id="Collections" class="section-p3 section-p1">
+            <div class="Collection">
+                <h2>Naruto</h2>
+                <button class="white" onclick="window.location.href='shop.html';">Explore</button>
+            </div>
+            <div class="Collection Collection2">
+                <h2>One Piece</h2>
+                <button class="white" onclick="window.location.href='shop.html';">Explore</button>
+        </section>
+        <section id="Collections2">
+            <div class=" Collection Collection3">
+                <button class="white" onclick="window.location.href='shop.html';">Explore</button>
+            </div>
+            <div class="Collection Collection4">
+                <button class="white" onclick="window.location.href='shop.html';">Explore</button>
+            </div>
+            <div class="Collection Collection5">
+                <button class="white" onclick="window.location.href='shop.html';">Explore</button>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <footer class="section-p2 section-p1 ">
+            <div class="logo-container">
+                <img src="Images/Logo1.png" alt="Website Logo">
+            </div>
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+    <div id="sectionNaruto">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="Images/Products/Product naruto.jpg" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product joyboy.jpg" width="100%" class="sub-img" alt="">
                     </div>
-                    <h4>Out Of Stock</h4>
-                </div>
-<!--                 <div class="newprice">₹999 Offer!!!</div> -->
-                <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-            </div>
-            <div class="pro">
-                <img src="Images/Action Figures/Itachi ActionF.jpg" alt="image-7">
-                <div class="about">
-                    <span>Air-nime</span>
-                    <h5>Itachi Uchiha</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product Marco.jpg" width="100%" class="sub-img" alt="">
                     </div>
-                    <h4>Out Of Stock</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-            </div>
-            <div class="pro" onclick="window.location.href='https://wa.me/919625670484?text=%22hello,%20I%20want%20to%20buy%20KUNAI%20%20https://www.airnime.in/Images/Action%20Figures/Kunai%20ActionF.jpg%22'">
-                <img src="Images/Action Figures/Kunai ActionF.jpg" alt="image-8">
-                <div class="about">
-                    <span>Air-nime</span>
-                    <h5>Kunai</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product Luffy.jpg" width="100%" class="sub-img" alt="">
                     </div>
-                    <h4v class="amount">₹500</h4>
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product naruto.jpg" width="100%" class="sub-img" alt="">
+                    </div>
                 </div>
-                <div class="newprice">₹349/- Offer!!!</div>
-                <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
             </div>
-        </div>
-    </section>
-    <h2 class="center" style="color: white;">Collections</h2>
-    <section id="Collections" class="section-p3 section-p1">
-        <div class="Collection">
-            <h2>Naruto</h2>
-            <button class="white">Explore</button>
-        </div>
-        <div class="Collection Collection2">
-            <h2>One Piece</h2>
-            <button class="white">Explore</button>
-    </section>
-    <section id="Collections2">
-        <div class=" Collection Collection3">
-            <button class="white">Explore</button>
-        </div>
-        <div class="Collection Collection4">
-            <button class="white">Explore</button>
-        </div>
-        <div class="Collection Collection5">
-            <button class="white">Explore</button>
-        </div>
-    </section>
-    <section id="Updates" class="section-p1 section-m1">
-        <div class="up">
-            <h4>Sign Up for Updates</h4>
-            <p>Get E-Mail Updates about New Products and Offers</p>
-        </div>
-        <div class="form">
-            <input type="text" placeholder="Your E-Mail address">
-            <button class="normal">Sign Up</button>
-        </div>
-    </section>
-    <footer class="section-p2 section-p1 ">
-        <div class="logo-container">
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/T-Shirt</h6>
+                <h4>Naruto</h4>
+                <h2>₹649</h2>
+                <!-- <select>
+                    <option>Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
+                <input type="number" value="1"> -->
+                <button class="normal" onclick="window.location.href='https://wa.link/84e0fu';">Buy Now</button>
+                <h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>
+                </div>
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Summer Collection New Modern Designs</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionNaruto')">
+                    <img src="Images/Products/Product naruto.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Naruto T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionMarco')">
+                    <img src="Images/Products/Product Marco.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Marco T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionLuffy')">
+                    <img src="Images/Products/Product Luffy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionJoyboy')">
+                    <img src="Images/Products/Product joyboy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy Gear-5 T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
             <img src="Images/Logo1.png" alt="Website Logo">
         </div>
-        <div class="col">
-            <h4>Contact</h4>
-            <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-            <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var SmallImg = document.getElementsByClassName("sub-img");
+
+            SmallImg[0].onclick = function () {
+                MainImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                MainImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                MainImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                MainImg.src = SmallImg[3].src;
+            }
+        </script>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="sectionMarco">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="Images/Products/Product Marco.jpg" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product joyboy.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product Marco.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product naruto.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product Luffy.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/T-Shirt</h6>
+                <h4>Marco The Phoenix</h4>
+                <h2>₹649</h2>
+                <!-- <select>
+                    <option>Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
+                <input type="number" value="1"> -->
+                <button class="normal" onclick="window.location.href='https://wa.link/jetj1l';">Buy Now</button>
+                <h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>
+                </div>
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Summer Collection New Modern Designs</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionNaruto')">
+                    <img src="Images/Products/Product naruto.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Naruto T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+
+                <div class="pro" onclick="display('sectionMarco')">
+                    <img src="Images/Products/Product Marco.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Marco T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionLuffy')">
+                    <img src="Images/Products/Product Luffy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionJoyboy')">
+                    <img src="Images/Products/Product joyboy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy Gear-5 T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
+            <img src="Images/Logo1.png" alt="Website Logo">
         </div>
-        <div class="Follow">
-            <h4>Follow us</h4>
-            <i class="icon">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-youtube"></i>
-            </i>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var SmallImg = document.getElementsByClassName("sub-img");
+
+            SmallImg[0].onclick = function () {
+                MainImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                MainImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                MainImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                MainImg.src = SmallImg[3].src;
+            }
+        </script>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="sectionLuffy">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="Images/Products/Product Luffy.jpg" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product joyboy.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product Marco.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product naruto.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product Luffy.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/T-Shirt</h6>
+                <h4>Monkey D Luffy</h4>
+                <h2>₹649</h2>
+                <!-- <select>
+                    <option>Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
+                <input type="number" value="1"> -->
+                <button class="normal" onclick="window.location.href='https://wa.link/g6wr0f';">Buy Now</button>
+                <h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>
+                </div>
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Summer Collection New Modern Designs</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionNaruto')">
+                    <img src="Images/Products/Product naruto.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Naruto T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionMarco')">
+                    <img src="Images/Products/Product Marco.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Marco T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionLuffy')">
+                    <img src="Images/Products/Product Luffy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionJoyboy')">
+                    <img src="Images/Products/Product joyboy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy Gear-5 T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
+            <img src="Images/Logo1.png" alt="Website Logo">
         </div>
-        <div class="col">
-            <h4>About</h4>
-            <a href="#">About us</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Contact us</a>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var SmallImg = document.getElementsByClassName("sub-img");
+
+            SmallImg[0].onclick = function () {
+                MainImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                MainImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                MainImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                MainImg.src = SmallImg[3].src;
+            }
+        </script>
+
+    </div>
+
+
+
+
+
+    <div id="sectionJoyboy">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="Images/Products/Product joyboy.jpg" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product joyboy.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product Marco.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product naruto.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Products/Product Luffy.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/T-Shirt</h6>
+                <h4>JOYBOY | ONEPIECE</h4>
+                <h2>₹649</h2>
+                <!-- <select>
+                    <option>Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
+                <input type="number" value="1"> -->
+                <button class="normal" onclick="window.location.href='https://wa.link/tlwm4d';">Buy Now</button>
+                <h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>
+                </div>
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Summer Collection New Modern Designs</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionNaruto')">
+                    <img src="Images/Products/Product naruto.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Naruto T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionMarco')">
+                    <img src="Images/Products/Product Marco.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Marco T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionLuffy')">
+                    <img src="Images/Products/Product Luffy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionJoyboy')">
+                    <img src="Images/Products/Product joyboy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy Gear-5 T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
+            <img src="Images/Logo1.png" alt="Website Logo">
         </div>
-        <div class="col">
-            <h4>My Account</h4>
-            <a href="#">Sign In</a>
-            <a href="#">View Cart</a>
-            <a href="#">Track My Order</a>
-            <a href="#">Help</a>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var SmallImg = document.getElementsByClassName("sub-img");
+
+            SmallImg[0].onclick = function () {
+                MainImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                MainImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                MainImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                MainImg.src = SmallImg[3].src;
+            }
+        </script>
+
+    </div>
+
+
+
+
+
+
+    <div id="sectionJjk">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/ZoroWano ActionF.jpeg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/Action Figure</h6>
+                <h4>JJK (Pack of 5)</h4>
+                <h2>SOLD OUT</h2>
+                <input type="number" value="1">
+                <button class="normal" onclick="window.location.href='https://wa.link/eh1rue';">Buy Now</button>
+                <!--<h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>  
+                </div>-->
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Brand New Action Figures</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionGear5Luffy')">
+                    <img src="Images/Action Figures/Gear-5 Luffy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Gear- 5 Luffy</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹599</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionzorowanoActionf')">
+                    <img src="Images/Action Figures/ZoroWano ActionF.jpeg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Zoro Wano</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹899</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionItachiActionF')">
+                    <img src="Images/Action Figures/Itachi ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Itachi Uchiha</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹499</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionKunaiActionF')">
+                    <img src="Images/Action Figures/Kunai ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Kunai</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹249</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
+            <img src="Images/Logo1.png" alt="Website Logo">
         </div>
-        <div class="col install">
-            <p>Secured Payment Gateways</p>
-            <img src="Images/pay.png" alt="Payment">
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var SmallImg = document.getElementsByClassName("sub-img");
+
+            SmallImg[0].onclick = function () {
+                MainImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                MainImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                MainImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                MainImg.src = SmallImg[3].src;
+            }
+        </script>
+        <script src="script.js"></script>
+    </div>
+
+
+
+
+
+
+    <div id="sectionLuffyActionF">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="Images/Action Figures/Luffy ActionF.jpg" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Luffy ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/Action Figure</h6>
+                <h4>Luffy Gear4 (Tankman)</h4>
+                <h2>SOLD OUT</h2>
+                <input type="number" value="1">
+                <button class="normal" onclick="window.location.href='https://wa.link/3qsvza';">Buy Now</button>
+                <!--<h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>  
+                </div>-->
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Brand New Action Figures</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionGear5Luffy')">
+                    <img src="Images/Action Figures/Gear-5 Luffy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Gear- 5 Luffy</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹599</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionzorowanoActionf')">
+                    <img src="Images/Action Figures/ZoroWano ActionF.jpeg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Zoro Wano</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹899</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionItachiActionF')">
+                    <img src="Images/Action Figures/Itachi ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Itachi Uchiha</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹499</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionKunaiActionF')">
+                    <img src="Images/Action Figures/Kunai ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Kunai</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹249</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
+            <img src="Images/Logo1.png" alt="Website Logo">
         </div>
-        <div class="Copyright">
-            <p>© 2024, Air-Nime| All Rights Reserved</p>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var SmallImg = document.getElementsByClassName("sub-img");
+
+            SmallImg[0].onclick = function () {
+                MainImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                MainImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                MainImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                MainImg.src = SmallImg[3].src;
+            }
+        </script>
+        <script src="script.js"></script>
+    </div>
+
+
+
+
+
+
+
+    <div id="sectionNarutoAction">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="Images/Action Figures/Naruto Action.jpg" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Naruto Action.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/Action Figure</h6>
+                <h4>Naruto</h4>
+                <h2>₹549</h2>
+                <input type="number" value="1">
+                <button class="normal">Buy Now</button>
+                <!--<h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>  
+                </div>-->
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Brand New Action Figures</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionGear5Luffy')">
+                    <img src="Images/Action Figures/Gear-5 Luffy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Gear- 5 Luffy</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹599</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionzorowanoActionf')">
+                    <img src="Images/Action Figures/ZoroWano ActionF.jpeg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Zoro Wano</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹899</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionItachiActionF')">
+                    <img src="Images/Action Figures/Itachi ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Itachi Uchiha</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹499</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionKunaiActionF')">
+                    <img src="Images/Action Figures/Kunai ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Kunai</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹249</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
+            <img src="Images/Logo1.png" alt="Website Logo">
         </div>
-    </footer>
-    <script src="script.js"></script>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="about.html">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var SmallImg = document.getElementsByClassName("sub-img");
+
+            SmallImg[0].onclick = function () {
+                MainImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                MainImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                MainImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                MainImg.src = SmallImg[3].src;
+            }
+        </script>
+        <script src="script.js"></script>
+    </div>
+
+
+
+
+
+
+    <div id="sectionZoroActionF">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/ZoroWano ActionF.jpeg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/Action Figure</h6>
+                <h4>Zoro</h4>
+                <h2>₹1499</h2>
+                <input type="number" value="1">
+                <button class="normal" onclick="window.location.href='https://wa.link/cqncvp';">Buy Now</button>
+                <!--<h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>  
+                </div>-->
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Brand New Action Figures</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionGear5Luffy')">
+                    <img src="Images/Action Figures/Gear-5 Luffy.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Gear- 5 Luffy</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹599</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionzorowanoActionf')">
+                    <img src="Images/Action Figures/ZoroWano ActionF.jpeg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Zoro Wano</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹899</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionItachiActionF')">
+                    <img src="Images/Action Figures/Itachi ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Itachi Uchiha</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹499</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionKunaiActionF')">
+                    <img src="Images/Action Figures/Kunai ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Kunai</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹249</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
+            <img src="Images/Logo1.png" alt="Website Logo">
+        </div>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var SmallImg = document.getElementsByClassName("sub-img");
+
+            SmallImg[0].onclick = function () {
+                MainImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                MainImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                MainImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                MainImg.src = SmallImg[3].src;
+            }
+        </script>
+        <script src="script.js"></script>
+    </div>
+
+
+
+
+
+
+    <div id="sectionGear5Luffy">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="Images/Action Figures/Gear-5 Luffy.jpg" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Gear-5 Luffy.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/Action Figure</h6>
+                <h4>Gear-5 Luffy</h4>
+                <h2>₹599</h2>
+                <input type="number" value="1">
+                <button class="normal"onclick="window.location.href='https://wa.link/ae5d0m';">Buy Now</button>
+                <!--<h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>  
+                </div>-->
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Brand New Action Figures</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionJjk')">
+                    <img src="Images/Action Figures/JJK ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>JJK (Pack of 5)</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>SOLD OUT</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionLuffyActionF')">
+                    <img src="Images/Action Figures/Luffy ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy Gear4 (Tankman)</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>SOLD OUT</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionNarutoAction')">
+                    <img src="Images/Action Figures/Naruto Action.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Naruto</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹549</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionZoroActionF')">
+                    <img src="Images/Action Figures/Zoro ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Zoro</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹1499</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
+            <img src="Images/Logo1.png" alt="Website Logo">
+        </div>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var SmallImg = document.getElementsByClassName("sub-img");
+
+            SmallImg[0].onclick = function () {
+                MainImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                MainImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                MainImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                MainImg.src = SmallImg[3].src;
+            }
+        </script>
+        <script src="script.js"></script>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="sectionItachiActionF">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="Images/Action Figures/Itachi ActionF.jpg" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Itachi ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/Action Figure</h6>
+                <h4>Itachi Uchiha</h4>
+                <h2>₹499</h2>
+                <input type="number" value="1">
+                <button class="normal" onclick="window.location.href='https://wa.link/0q7lv9';">Buy Now</button>
+                <!--<h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>  
+                </div>-->
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Brand New Action Figures</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionJjk')">
+                    <img src="Images/Action Figures/JJK ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>JJK (Pack of 5)</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>SOLD OUT</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionLuffyActionF')">
+                    <img src="Images/Action Figures/Luffy ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy Gear4 (Tankman)</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>SOLD OUT</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionNarutoAction')">
+                    <img src="Images/Action Figures/Naruto Action.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Naruto</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹549</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionZoroActionF')">
+                    <img src="Images/Action Figures/Zoro ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Zoro</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹1499</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
+            <img src="Images/Logo1.png" alt="Website Logo">
+        </div>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var SmallImg = document.getElementsByClassName("sub-img");
+
+            SmallImg[0].onclick = function () {
+                MainImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                MainImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                MainImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                MainImg.src = SmallImg[3].src;
+            }
+        </script>
+        <script src="script.js"></script>
+    </div>
+
+
+
+    <div id="sectionzorowanoActionf">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="Images/Action Figures/ZoroWano ActionF.jpeg" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/ZoroWano ActionF.jpeg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/Action Figure</h6>
+                <h4>Zoro Wano</h4>
+                <h2>₹899</h2>
+                <input type="number" value="1">
+                <button class="normal" onclick="window.location.href='https://wa.link/pwy47y';">Buy Now</button>
+                <!--<h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>  
+                </div>-->
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Brand New Action Figures</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionJjk')">
+                    <img src="Images/Action Figures/JJK ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>JJK (Pack of 5)</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>SOLD OUT</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionLuffyActionF')">
+                    <img src="Images/Action Figures/Luffy ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy Gear4 (Tankman)</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>SOLD OUT</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionNarutoAction')">
+                    <img src="Images/Action Figures/Naruto Action.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Naruto</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹549</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionZoroActionF')">
+                    <img src="Images/Action Figures/Zoro ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Zoro</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹1499</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
+            <img src="Images/Logo1.png" alt="Website Logo">
+        </div>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var SmallImg = document.getElementsByClassName("sub-img");
+
+            SmallImg[0].onclick = function () {
+                MainImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                MainImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                MainImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                MainImg.src = SmallImg[3].src;
+            }
+        </script>
+        <script src="script.js"></script>
+    </div>
+
+
+
+
+    <div id="sectionKunaiActionF">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="Images/Action Figures/Kunai ActionF.jpg" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Kunai ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img-col">
+                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/Action Figure</h6>
+                <h4>Kunai</h4>
+                <h2>₹249</h2>
+                <input type="number" value="1">
+                <button class="normal" onclick="window.location.href='https://wa.link/ka68mw';">Buy Now</button>
+                <!--<h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>  
+                </div>-->
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Brand New Action Figures</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionJjk')">
+                    <img src="Images/Action Figures/JJK ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>JJK (Pack of 5)</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>SOLD OUT</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionLuffyActionF')">
+                    <img src="Images/Action Figures/Luffy ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy Gear4 (Tankman)</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>SOLD OUT</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionNarutoAction')">
+                    <img src="Images/Action Figures/Naruto Action.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Naruto</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹549</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionZoroActionF')">
+                    <img src="Images/Action Figures/Zoro ActionF.jpg" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Zoro</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹1499</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
+            <img src="Images/Logo1.png" alt="Website Logo">
+        </div>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var SmallImg = document.getElementsByClassName("sub-img");
+
+            SmallImg[0].onclick = function () {
+                MainImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                MainImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                MainImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                MainImg.src = SmallImg[3].src;
+            }
+        </script>
+        <script type="text/javascript"
+            src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    </div>
 </body>
 
 </html>
+
+
