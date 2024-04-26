@@ -1,2781 +1,3172 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "spartan", sans-serif;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Air-Nime</title>
-    <link rel="stylesheet" href="C:\Users\admin\Downloads\font-awesome-4.7.0\font-awesome-4.7.0\css\font-awesome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .rating i {
-            color: gold;
-            /* Default color for stars */
+body {
+    background-image: url("wal4.png");
+}
+
+.amount {
+    /* margin-top: 20px; */
+    position: relative;
+    color: #088178;
+}
+
+.newprice {
+    /* display: inline-block; */
+    font-size: 20px;
+    color: green;
+    padding: 10px;
+    display: flex;
+}
+
+
+
+
+.amount::after {
+    content: "";
+    width: 110%;
+    height: 1.5px;
+    background: black;
+    position: absolute;
+    bottom: 9px;
+    left: 0;
+}
+
+#products h2{
+    color: white;
+}
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button.white {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: greenyellow;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+}
+
+
+.section-p1 {
+    border:2px solid black;
+    margin: 40px 8px;
+    border-radius: 20px;
+    padding-top: 50px;
+    background-color: rgba(255, 255, 255, 0.462);
+    /* background-color: rgba(255, 255, 255, 0.371); */
+    /* margin:; */
+}
+
+.section-p1 p {
+    color: black;
+    font-size: larger;
+}
+
+h2.center {
+    text-align: center;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+
+/* HEADER SECTION */
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #2b2a2a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.logo-container {
+    width: 100px;
+    height: auto;
+}
+
+.logo-container img {
+    width: 150%;
+    height: auto;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: aliceblue;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: greenyellow;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: greenyellow;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* TOP BANNER SECTION */
+
+#zoro {
+    background-image: url('Images/Banners/Roronoa Banner.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+
+#zoro .d1 {
+
+    font-size: 8vh;
+    padding-top: 2vh;
+    color: greenyellow;
+}
+
+#zoro .d2 {
+    font-size: 9vh;
+    color: #fff;
+    padding-bottom: 2vh;
+}
+
+#zoro .d3 {
+    color: #fff;
+    font-size: 2vh;
+
+}
+
+#zoro button {
+
+    color: black;
+    border: 0;
+    padding: 1vh;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 3vh;
+    margin-top: 2.3vh;
+}
+
+#zoro button:hover {
+    background-color: greenyellow;
+    color: #fff;
+}
+
+
+
+#zoro button {
+    color: black;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#zoro button:hover {
+    background-color: greenyellow;
+    color: #fff;
+}
+
+/* IMAGE SECTION */
+
+.container {
+    background-color: white;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Define styles for the images */
+.container img {
+    width: auto;
+    height: 100px;
+    margin-right: 10px;
+}
+
+
+/* PRODUCT DISPLAY */
+
+#Products {
+    text-align: center;
+}
+
+#Products .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+#Products .pro {
+    background-color: white;
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#Products .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#Products .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#Products .pro .about {
+    text-align: left;
+    padding: 10px 0;
+}
+
+#Products .pro .about span {
+    color: #606063;
+    font-size: 12px;
+}
+
+#Products .pro .about h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#Products .pro .about h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#Products .pro .shopping-cart-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 80px;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+/* BANNER */
+
+#Banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("Images/Banners/Banner.png");
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#Banner h2 {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+#Banner h2 span {
+    color: greenyellow;
+}
+
+#Banner button:hover {
+    background: greenyellow;
+    color: #fff;
+}
+
+/* Collections*/
+#Collections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px;
+    background-color: #00000000;
+}
+
+#Collections .Collection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("Images/Collections/Naruto Collection.jpg");
+    min-width: 580px;
+    height: 45vh;
+    background-size: contain;
+    background-position: center;
+    padding: 30px;
+}
+
+#Collections .Collection2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("Images/Collections/One Piece Collections.jpg");
+    min-width: 580px;
+    height: 45vh;
+    background-size: contain;
+    background-position: center;
+    padding: 30px;
+}
+
+#Collections h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 10px 0;
+    margin-left: 20%;
+}
+
+#Collections .Collection:hover button {
+    background: greenyellow;
+    border: 1px solid #000;
+    color: #fff;
+    transition: 0.2s ease;
+
+}
+
+#Collections2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#Collections2 h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 10px 0;
+}
+
+#Collections2 .Collection3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("Images/Collections/DBZ\ collection.jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#Collections2 .Collection4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("Images/Collections/Demon-Slayer Collection.jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#Collections2 .Collection5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("Images/Collections/JJK Collection (1).jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#Collections2 .Collection:hover button {
+    background: greenyellow;
+    border: 1px solid #000;
+    color: #fff;
+    transition: 0.2s ease;
+}
+
+/* SIGN UP */
+#Updates {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("Images/Banners/Banner 1.png");
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+    /* height: 20vh; */
+    padding-left: 60px;
+    padding-right: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#Updates .form {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+}
+
+#Updates input {
+    height: 3.125rem;
+    font-size: 0 1.25em;
+    padding: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#Updates button {
+    background-color: greenyellow;
+    color: #fff;
+    white-space: nowrap;
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#Updates h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#Updates p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer h4 {
+    /* font-size: ; */
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    /* font-size: 13px; */
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer .Follow i:hover,
+footer a:hover {
+    color: greenyellow;
+}
+
+footer .Copyright {
+    width: 100%;
+    text-align: center;
+}
+
+/* SHOP */
+#ShopBanner {
+    background-image: url('Images/Banners/Shop\ Banner.jpg');
+    height: 30vmax;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ShopBanner h1 {
+    color: greenyellow;
+}
+
+#ShopBanner p {
+    color: #fff;
+}
+
+#Pagination {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#Pagination a {
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#Pagination a i {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Single Product Banner*/
+
+#SBanner {
+    margin-top: 20px;
+    background-image: url('Images/Banners/SBanner1.jpg');
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+#SBanner h2 {
+    color: #fff;
+}
+
+#SBanner span {
+    color: greenyellow;
+}
+
+#Prodetails {
+    background-color: rgba(255, 255, 255, 0.642);
+    /* display: flex; */
+    padding: 20px;
+    margin-top: 50px;
+    margin: 2%;
+    border: 2px solid black;
+}
+
+/* Single Product Details*/
+#Prodetails .single-pro-img {
+    border: 2px solid black;
+    padding: 20px;
+    width: 100%;
+    margin-right: 50px;
+}
+
+.sub-img-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.sub-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#Prodetails .single-pro-details {
+    width: 100%;
+    padding-top: 30px;
+}
+
+#Prodetails .single-pro-details input:focus {
+    outline: none;
+}
+
+/* #Prodetails .single-pro-details h4 {
+    padding: 40px 0 20px 0;
+} */
+
+#Prodetails .single-pro-details h2 {
+    font-size: 26px;
+}
+
+#Prodetails .single-pro-details select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#Prodetails .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#Prodetails .single-pro-details button {
+    background: whitesmoke;
+    color: greenyellow;
+    white-space: nowrap;
+    border: 1px solid #000;
+}
+
+#Prodetails .single-pro-details button:hover {
+    background: greenyellow;
+    color: #fff;
+}
+
+#Prodetails .col1 {
+    line-height: 10px;
+}
+
+
+.Blog-Details{
+    padding: 20px;
+}
+.Blog-Details h4{
+    padding-top: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Blog-Details p{
+    display: inline;
+    align-items: center;
+    /* padding: 2px; */
+    justify-content:  center;
+}
+
+#Page-Header.Blog-Header {
+    
+    background-image: url('Images/Banners/Banner2.jpg');
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Page-Header h1 {
+    color: greenyellow;
+}
+
+#Page-Header p {
+    color: #fff;
+}
+
+#Blog {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* padding: 100px 100px 0 100px; */
+}
+
+
+
+
+#Blog .Blog-Box {
+    border: 2px solid black;
+    margin-top: 20px;
+    /* display: flex; */
+    /* align-items: center; */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.763);
+    border-radius: 20px;
+    padding-bottom: 9px;
+}
+
+
+#Blog .Blog-Box:hover{
+    background-color: rgb(255, 255, 255);
+    transition: 1s;
+}
+/* #Blog .Blog-Img { */
+    /* width: 100%; */
+    /* margin-right:  */
+/* } */
+
+#Blog Img {
+    border-top-left-radius:20px ;
+    border-top-right-radius:20px ;
+    width: 100%;
+    /* height: 300px; */
+    object-fit: cover;
+}
+
+/* #Blog .Blog-Details { */
+    /* width: 50%; */
+/* } */
+
+#Blog .Blog-Details a {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700px;
+    color: #000;
+    position: relative;
+    transition: 0.3s;
+}
+
+#Blog .Blog-Details a::after {
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 4px;
+    right: -60px;
+}
+
+#Blog .Blog-Details a:hover {
+    color: greenyellow;
+}
+
+
+
+/* ABOUT US*/
+
+#Page-Header.About-Header {
+    background-image: url('Images/Banners/About\ Banner.png');
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#About-Head {
+    display: flex;
+    align-items: center;
+}
+
+#About-Head img {
+    width: 50%;
+    height: auto;
+}
+
+#About-Head div {
+    padding-left: 40px;
+}
+
+#About-Video {
+    text-align: center;
+}
+
+#About-Video .video {
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+
+#About-Video .video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+
+
+.promarco {
+    background-color: white;
+    width: 23%;
+    min-width: 99.5%;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+.promarco-img{
+    width: 100%;
+}
+/* MEDIA QUERY*/
+
+@media (max-width: 360px) {
+
+
+    #Page-Header.Contact-Header{
+        background-image: url('Images/Banners/Banner\ C.jpg');
+        height: 40vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #contact-details{
+        /* display: flex; */
+        padding: 20px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+    /* #contact-details .details{ */
+        /* width: 40%; */
+    /* } */
+    #contact-details .details span,
+    #form-details form span{
+        font-size: 12px;
+    }
+    #contact-details .details h2,
+    #form-details form h2{
+        font-size: 26px;
+        line-height: 35px;
+        padding: 20px;
+    }
+    #contact-details .details li{
+        list-style: none;
+        display: flex;
+        padding: 10px 0;
+    }
+    #contact-details .details li i{
+        font-size: 14px;
+        padding-right: 22px;
+    }
+    #contact-details .details li p{
+        margin: 0;
+        font-size: 14px;
+    }
+    #contact-details .Map{
+        /* width: 55%; */
+        height: 400px;
+    }
+    #contact-details .Map iframe{
+        width: 100%;
+        height: 100%;
+    }
+    #form-details{
+        background-color: rgba(255, 255, 255, 0.86);
+        /* display: flex; */
+        justify-content: space-between;
+        margin: 30px;
+        /* padding: 80px; */
+        border: 1px solid #e1e1e1;
+    }
+    #form-details form{
+        width: 93%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #form-details form input,
+    #form-details form textarea{
+        width: 100%;
+        padding: 12px 15px;
+        outline: none;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        border: 1px solid #e1e1e1;
+    }
+    #form-details form button{
+        background-color: rgb(126, 246, 122);
+        color: #000;
+        transition: 0.3s;
+        align-items: center;
+        margin-left: 27%;
+        margin-bottom: 15px;
+    }
+    #form-details form button:hover{
+        background-color: greenyellow;
+        color: #fff;
+    }
+    #form-details .people div{
+        padding-bottom: 25px;
+        display: flex;
+        align-items: flex-start;
+    }
+    #form-details .people div img{
+        width: 65px;
+        height: 65px;
+        object-fit: cover;
+        margin-right: 15px;
+    }
+    #form-details .people div p{
+        margin: 0;
+        font-size: 13px;
+        line-height: 25px;
+    }
+    #form-details .people div p span{
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+    }
+    
+
+    #Prodetails {
+        background-color: rgba(255, 255, 255, 0.642);
+        /* display: flex; */
+        padding: 20px;
+        margin-top: 50px;
+        margin: 2%;
+        border: 2px solid black;
+        /* max-height: 200vmin; */
+    }
+    
+    /* Single Product Details*/
+    #Prodetails .single-pro-img {
+        border: 2px solid black;
+        padding: 20px;
+        width: 100%;
+        min-height: 2vmax;
+        /* margin-right: 50px; */
+    }
+    
+    .sub-img-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .sub-img-col {
+        flex-basis: 24%;
+        cursor: pointer;
+    }
+    
+    #Prodetails .single-pro-details {
+        width: 100%;
+    
+        /* padding-top: 30px; */
+    }
+    
+    #Prodetails .single-pro-details input:focus {
+        outline: none;
+    }
+    
+    /* #Prodetails .single-pro-details h4 {
+        padding: 40px 0 20px 0;
+    } */
+    
+    #Prodetails .single-pro-details h2 {
+        font-size: 26px;
+    }
+    
+    #Prodetails .single-pro-details select {
+        display: block;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+    }
+    
+    #Prodetails .single-pro-details input {
+        width: 50px;
+        height: 47px;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    
+    #Prodetails .single-pro-details button {
+        background: whitesmoke;
+        color: greenyellow;
+        white-space: nowrap;
+        border: 1px solid #000;
+    }
+    
+    #Prodetails .single-pro-details button:hover {
+        background: greenyellow;
+        color: #fff;
+    }
+    
+    #Prodetails .col1 {
+        line-height: 10px;
+    }
+    
+
+
+
+    #Page-Header.About-Header {
+        background-image: url('Images/Banners/About\ Banner.png');
+        height: 40vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #About-Head {
+        display:block;
+        align-items: center;
+        font-size: 3vw;
+    }
+    
+    #About-Head img {
+        width: 100%;
+        height: auto;
+    }
+    #About-Head  h1{
+        font-size: 10vw;
+    }
+    
+    #About-Head div {
+        padding: 10px;
+    }
+    
+    #About-Video {
+    
+        text-align: center;
+        color: greenyellow;
+        font-size: 10vw;
+    }
+
+
+    
+    #About-Video h1{
+        color: greenyellow;
+    }
+    #About-Video b{
+        color: white;
+        font-size: 10vw;
+    }
+    
+    #About-Video .video {
+        width: 70%;
+        height: 100%;
+        margin: 30px auto 0 auto;
+    }
+    
+    #About-Video .video video {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    
+    
+    
+    
+    .auto-slider {
+        border: 2px solid black;
+        position: relative;
+        box-sizing: border-box;
+        /* Changed from content-box to border-box */
+        display: block;
+        /* Changed from inline-block to block */
+        padding: 0;
+        /* Removed padding */
+        background-color: white;
+        /* Combined background properties */
+        /* box-shadow: 0px 0px 20px rgb(25, 0, 255),
+      1px 1px 6px rgba(0, 0, 0, 0.4); */
+        /* Combined box-shadow properties */
+        /* max-width: 100%; */
+        max-height: 20vh;
+        /* Changed to 100% */
+        /* min-width: 100%; */
+        /* Changed to 100% */
+        min-height: 200px;
+        /* Set a minimum height for the slider */
+        overflow: hidden;
+    }
+
+
+    /* @keyframes sliding {
+    0% {
+      left: 0%;
+    }
+  
+    20% {
+      left: -100%;
+    }
+  
+    40% {
+      left: -200%;
+    }
+  
+    60% {
+      left: -300%;
+    }
+  
+    80% {
+      left: -400%;
+    }
+  
+    100% {
+      left: 0%;
+    }
+  }
+  
+  @keyframes indicating {
+    from {
+      left: -100%;
+    }
+  
+    to {
+      left: 0;
+    }
+  } */
+
+
+    div#slider {
+        overflow: hidden;
+    }
+
+    div#slider figure img {
+        /* width: 13%; */
+        margin-top: 2%;
+        width: 20%;
+        float: left;
+    }
+
+    div#slider figure {
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        text-align: left;
+        font-size: 0;
+        animation: 15s sliding ease infinite;
+    }
+
+    /* Slider indicator */
+    .indicator {
+        width: 100%;
+        max-width: 100%;
+        height: 6px;
+        background: #e41b17;
+        position: absolute;
+        bottom: 0;
+
+        animation: indicating 6s ease;
+
+    }
+
+    /* .auto-slider{
+    position: relative;
+    box-sizing: content-box;
+    display: inline-block;
+    padding: 0% 10px 20px;
+    background: #ffffff00;
+    max-width: 720px;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 4px; */
+    /* box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);  */
+
+    /* } */
+    /* .indicator {
+    width: 100%;
+    max-width: 100%;
+    height: 6px;
+    background: #e41b17;
+    position: absolute;
+    bottom: 0;
+  
+    animation: indicating 5s ease infinite; */
+
+    /* } */
+
+    @keyframes sliding {
+        0% {
+            /* left: 0%; */
         }
 
-        .rating .fa-star-half-alt {
-            color: orange;
-            /* Color for half stars */
+        20% {
+            left: -100%;
         }
 
-        .shopping-cart-icon {
-            font-size: 24px;
-            color: #333;
+        40% {
+            left: -200%;
         }
-    </style>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <div id="sectionmain1">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="ShopBanner">
-            <h1>Explore Your Style</h1>
-            <p>Refresh your style with on-trend pieces from our best clothing Collection</p>
-        </section>
-        <section id="Products" class="section-p1">
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionNaruto')">
-                    <img src="Images/Products/Product naruto.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Naruto T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4v class="amount">₹799</h4>
-                    </div>
-                    <div class="newprice">₹649/- Only</div>
-                <i class="fas fa-shopping-cart shopping-cart-icon"></i>
-                </div>
-                <div class="pro" onclick="display('sectionMarco')">
-                    <img src="Images/Products/Product Marco.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Marco T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4v class="amount">₹799</h4>
-                    </div>
-                    <div class="newprice">₹649/- Only</div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionLuffy')">
-                    <img src="Images/Products/Product Luffy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4v class="amount">₹799</h4>
-                    </div>
-                    <div class="newprice">₹649/- Only</div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionJoyboy')">
-                    <img src="Images/Products/Product joyboy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy Gear-5 T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4v class="amount">799</h4>
-                    </div>
-                    <div class="newprice">₹649/- Only</div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-            <!-- <div class="pro-container"> -->
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionJjk')">
-                    <img src="Images/Action Figures/JJK ActionF.jpg" alt="Image-1">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>JJK (Pack of 5)</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>Out Of Stock</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionLuffyActionF')">
-                    <img src="Images/Action Figures/Luffy ActionF.jpg" alt="image-2">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy Gear4 (Tankman)</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>Out Of Stock</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionNarutoAction')">
-                    <img src="Images/Action Figures/Naruto Action.jpg" alt="image-3">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Naruto</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4v class="amount">₹749</h4>
-                        </div>
-                        <div class="newprice">₹549/- Offer!!!</div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionZoroActionF')">
-                    <img src="Images/Action Figures/Zoro ActionF.jpg" alt="image-4">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Zoro</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4v class="amount">₹1699</h4>
-                    </div>
-                    <div class="newprice">₹1499/- Offer!!!</div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionGear5Luffy')">
-                    <img src="Images/Action Figures/Gear-5 Luffy.jpg" alt="image-5">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Gear- 5 Luffy</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4v class="amount">₹899</h4>
-                        </div>
-                        <div class="newprice">₹549/- Offer!!!</div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionZoroActionF')">
-                    <img src="Images/Action Figures/ZoroWano ActionF.jpeg" alt="image-6">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Zoro Wano</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4v class="amount">₹1199</h4>
-                        </div>
-                        <div class="newprice">₹899/- Offer!!!</div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionItachiActionF')">
-                    <img src="Images/Action Figures/Itachi ActionF.jpg" alt="image-7">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Itachi Uchiha</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4v class="amount">₹699</h4>
-                        </div>
-                        <div class="newprice">₹499/- Offer!!!</div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionKunaiActionF')">
-                    <img src="Images/Action Figures/Kunai ActionF.jpg" alt="image-8">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Kunai</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4v class="amount">₹399</h4>
-                    </div>
-                    <div class="newprice">₹249/- Offer!!!</div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Pagination" class="section-p1">
-            <a href="shop.html">1</a>
-            <a href="Shop2.html">2</a>
-
-            <a href="Shop3.html"><i class="fa fa-angle-right"></i></a>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <footer class=" section-p2 section-p1">
-            <div class="logo-container">
-                <img src="Images/Logo1.png" alt="Website Logo">
-            </div>
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script src="script.js"></script>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="sectionNaruto">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="Images/Products/Product naruto.jpg" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product joyboy.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product Marco.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product Luffy.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product naruto.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/T-Shirt</h6>
-                <h4>Naruto</h4>
-                <h2>₹649</h2>
-                <!-- <select>
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                </select>
-                <input type="number" value="1"> -->
-                <button class="normal" onclick="window.location.href='https://wa.link/84e0fu';">Buy Now</button>
-                <h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>
-                </div>
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Summer Collection New Modern Designs</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionNaruto')">
-                    <img src="Images/Products/Product naruto.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Naruto T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionMarco')">
-                    <img src="Images/Products/Product Marco.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Marco T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionLuffy')">
-                    <img src="Images/Products/Product Luffy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionJoyboy')">
-                    <img src="Images/Products/Product joyboy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy Gear-5 T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="sectionMarco">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="Images/Products/Product Marco.jpg" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product joyboy.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product Marco.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product naruto.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product Luffy.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/T-Shirt</h6>
-                <h4>Marco The Phoenix</h4>
-                <h2>₹649</h2>
-                <!-- <select>
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                </select>
-                <input type="number" value="1"> -->
-                <button class="normal" onclick="window.location.href='https://wa.link/jetj1l';">Buy Now</button>
-                <h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>
-                </div>
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Summer Collection New Modern Designs</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionNaruto')">
-                    <img src="Images/Products/Product naruto.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Naruto T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-
-                <div class="pro" onclick="display('sectionMarco')">
-                    <img src="Images/Products/Product Marco.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Marco T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionLuffy')">
-                    <img src="Images/Products/Product Luffy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionJoyboy')">
-                    <img src="Images/Products/Product joyboy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy Gear-5 T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="sectionLuffy">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="Images/Products/Product Luffy.jpg" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product joyboy.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product Marco.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product naruto.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product Luffy.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/T-Shirt</h6>
-                <h4>Monkey D Luffy</h4>
-                <h2>₹649</h2>
-                <!-- <select>
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                </select>
-                <input type="number" value="1"> -->
-                <button class="normal" onclick="window.location.href='https://wa.link/g6wr0f';">Buy Now</button>
-                <h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>
-                </div>
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Summer Collection New Modern Designs</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionNaruto')">
-                    <img src="Images/Products/Product naruto.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Naruto T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionMarco')">
-                    <img src="Images/Products/Product Marco.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Marco T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionLuffy')">
-                    <img src="Images/Products/Product Luffy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionJoyboy')">
-                    <img src="Images/Products/Product joyboy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy Gear-5 T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-
-    </div>
-
-
-
-
-
-    <div id="sectionJoyboy">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="Images/Products/Product joyboy.jpg" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product joyboy.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product Marco.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product naruto.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Products/Product Luffy.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/T-Shirt</h6>
-                <h4>JOYBOY | ONEPIECE</h4>
-                <h2>₹649</h2>
-                <!-- <select>
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                </select>
-                <input type="number" value="1"> -->
-                <button class="normal" onclick="window.location.href='https://wa.link/tlwm4d';">Buy Now</button>
-                <h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>
-                </div>
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Summer Collection New Modern Designs</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionNaruto')">
-                    <img src="Images/Products/Product naruto.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Naruto T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionMarco')">
-                    <img src="Images/Products/Product Marco.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Marco T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionLuffy')">
-                    <img src="Images/Products/Product Luffy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionJoyboy')">
-                    <img src="Images/Products/Product joyboy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy Gear-5 T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-
-    </div>
-
-
-
-
-
-
-    <div id="sectionJjk">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/ZoroWano ActionF.jpeg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/Action Figure</h6>
-                <h4>JJK (Pack of 5)</h4>
-                <h2>SOLD OUT</h2>
-                <input type="number" value="1">
-                <button class="normal" onclick="window.location.href='https://wa.link/eh1rue';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Brand New Action Figures</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionGear5Luffy')">
-                    <img src="Images/Action Figures/Gear-5 Luffy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Gear- 5 Luffy</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹599</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionzorowanoActionf')">
-                    <img src="Images/Action Figures/ZoroWano ActionF.jpeg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Zoro Wano</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹899</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionItachiActionF')">
-                    <img src="Images/Action Figures/Itachi ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Itachi Uchiha</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹499</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionKunaiActionF')">
-                    <img src="Images/Action Figures/Kunai ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Kunai</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹249</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script>
-    </div>
-
-
-
-
-
-
-    <div id="sectionLuffyActionF">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="Images/Action Figures/Luffy ActionF.jpg" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Luffy ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/Action Figure</h6>
-                <h4>Luffy Gear4 (Tankman)</h4>
-                <h2>SOLD OUT</h2>
-                <input type="number" value="1">
-                <button class="normal" onclick="window.location.href='https://wa.link/3qsvza';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Brand New Action Figures</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionGear5Luffy')">
-                    <img src="Images/Action Figures/Gear-5 Luffy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Gear- 5 Luffy</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹599</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionzorowanoActionf')">
-                    <img src="Images/Action Figures/ZoroWano ActionF.jpeg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Zoro Wano</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹899</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionItachiActionF')">
-                    <img src="Images/Action Figures/Itachi ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Itachi Uchiha</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹499</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionKunaiActionF')">
-                    <img src="Images/Action Figures/Kunai ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Kunai</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹249</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script>
-    </div>
-
-
-
-
-
-
-
-    <div id="sectionNarutoAction">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="Images/Action Figures/Naruto Action.jpg" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Naruto Action.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/Action Figure</h6>
-                <h4>Naruto</h4>
-                <h2>₹549</h2>
-                <input type="number" value="1">
-                <button class="normal">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Brand New Action Figures</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionGear5Luffy')">
-                    <img src="Images/Action Figures/Gear-5 Luffy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Gear- 5 Luffy</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹599</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionzorowanoActionf')">
-                    <img src="Images/Action Figures/ZoroWano ActionF.jpeg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Zoro Wano</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹899</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionItachiActionF')">
-                    <img src="Images/Action Figures/Itachi ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Itachi Uchiha</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹499</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionKunaiActionF')">
-                    <img src="Images/Action Figures/Kunai ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Kunai</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹249</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="about.html">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script>
-    </div>
-
-
-
-
-
-
-    <div id="sectionZoroActionF">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/ZoroWano ActionF.jpeg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/Action Figure</h6>
-                <h4>Zoro</h4>
-                <h2>₹1499</h2>
-                <input type="number" value="1">
-                <button class="normal" onclick="window.location.href='https://wa.link/cqncvp';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Brand New Action Figures</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionGear5Luffy')">
-                    <img src="Images/Action Figures/Gear-5 Luffy.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Gear- 5 Luffy</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹599</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionzorowanoActionf')">
-                    <img src="Images/Action Figures/ZoroWano ActionF.jpeg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Zoro Wano</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹899</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionItachiActionF')">
-                    <img src="Images/Action Figures/Itachi ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Itachi Uchiha</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹499</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionKunaiActionF')">
-                    <img src="Images/Action Figures/Kunai ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Kunai</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹249</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script>
-    </div>
-
-
-
-
-
-
-    <div id="sectionGear5Luffy">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="Images/Action Figures/Gear-5 Luffy.jpg" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Gear-5 Luffy.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/Action Figure</h6>
-                <h4>Gear-5 Luffy</h4>
-                <h2>₹599</h2>
-                <input type="number" value="1">
-                <button class="normal"onclick="window.location.href='https://wa.link/ae5d0m';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Brand New Action Figures</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionJjk')">
-                    <img src="Images/Action Figures/JJK ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>JJK (Pack of 5)</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>SOLD OUT</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionLuffyActionF')">
-                    <img src="Images/Action Figures/Luffy ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy Gear4 (Tankman)</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>SOLD OUT</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionNarutoAction')">
-                    <img src="Images/Action Figures/Naruto Action.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Naruto</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹549</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionZoroActionF')">
-                    <img src="Images/Action Figures/Zoro ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Zoro</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹1499</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script>
-
-    </div>
-
-
-
-
-
-
-
-    <div id="sectionItachiActionF">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="Images/Action Figures/Itachi ActionF.jpg" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Itachi ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/Action Figure</h6>
-                <h4>Itachi Uchiha</h4>
-                <h2>₹499</h2>
-                <input type="number" value="1">
-                <button class="normal" onclick="window.location.href='https://wa.link/0q7lv9';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Brand New Action Figures</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionJjk')">
-                    <img src="Images/Action Figures/JJK ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>JJK (Pack of 5)</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>SOLD OUT</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionLuffyActionF')">
-                    <img src="Images/Action Figures/Luffy ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy Gear4 (Tankman)</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>SOLD OUT</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionNarutoAction')">
-                    <img src="Images/Action Figures/Naruto Action.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Naruto</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹549</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionZoroActionF')">
-                    <img src="Images/Action Figures/Zoro ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Zoro</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹1499</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script>
-    </div>
-
-
-
-    <div id="sectionzorowanoActionf">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="Images/Action Figures/ZoroWano ActionF.jpeg" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/ZoroWano ActionF.jpeg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/Action Figure</h6>
-                <h4>Zoro Wano</h4>
-                <h2>₹899</h2>
-                <input type="number" value="1">
-                <button class="normal" onclick="window.location.href='https://wa.link/pwy47y';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Brand New Action Figures</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionJjk')">
-                    <img src="Images/Action Figures/JJK ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>JJK (Pack of 5)</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>SOLD OUT</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionLuffyActionF')">
-                    <img src="Images/Action Figures/Luffy ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy Gear4 (Tankman)</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>SOLD OUT</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionNarutoAction')">
-                    <img src="Images/Action Figures/Naruto Action.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Naruto</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹549</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionZoroActionF')">
-                    <img src="Images/Action Figures/Zoro ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Zoro</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹1499</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script>
-    </div>
-
-
-
-
-    <div id="sectionKunaiActionF">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> keychain</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="Images/Action Figures/Kunai ActionF.jpg" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Kunai ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Zoro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/Tanjiro ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img-col">
-                        <img src="Images/Action Figures/JJK ActionF.jpg" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/Action Figure</h6>
-                <h4>Kunai</h4>
-                <h2>₹249</h2>
-                <input type="number" value="1">
-                <button class="normal" onclick="window.location.href='https://wa.link/ka68mw';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Brand New Action Figures</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionJjk')">
-                    <img src="Images/Action Figures/JJK ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>JJK (Pack of 5)</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>SOLD OUT</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionLuffyActionF')">
-                    <img src="Images/Action Figures/Luffy ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy Gear4 (Tankman)</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>SOLD OUT</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionNarutoAction')">
-                    <img src="Images/Action Figures/Naruto Action.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Naruto</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹549</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionZoroActionF')">
-                    <img src="Images/Action Figures/Zoro ActionF.jpg" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Zoro</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹1499</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="Updates" class="section-p1 section-m1">
-            <div class="up">
-                <h4>Sign Up for Updates</h4>
-                <p>Get E-Mail Updates about New Products and Offers</p>
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your E-Mail address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script type="text/javascript"
-            src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
-    </div>
-</body>
-
-</html>
+
+        60% {
+            left: -300%;
+        }
+
+        80% {
+            /* left: -400%; */
+        }
+
+        100% {
+            /* left: 0%; */
+        }
+    }
+
+    @keyframes indicating {
+        from {
+            left: -100%;
+        }
+
+        to {
+            left: 0;
+        }
+    }
+
+
+    .section-p2 {
+
+        color: white;
+        background-color: rgba(100, 114, 206, 0.371);
+        padding: 20px;
+        /* background-color: rgb(78, 74, 74); */
+    }
+
+    h1 {
+        font-size: 50px;
+        line-height: 64px;
+        color: #222;
+    }
+
+    .f1 {
+        /* margin-left: -10%; */
+        padding: 0%;
+        margin: 0%;
+        font-size: 50px;
+        /* font-size:larger; */
+        /* line-height: 1vw; */
+        color: rgb(192, 251, 75);
+    }
+
+    h4 {
+        font-size: 20px;
+        color: #222;
+    }
+
+    h6 {
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #465b52;
+        margin: 15px 0 20px 0;
+    }
+
+
+    #header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 1vw;
+
+        background: #2b2a2a;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    .logo-container {
+        width: 10%;
+        height: auto;
+    }
+
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #navbar li {
+        list-style: none;
+        padding: 0 2vw;
+        position: relative;
+    }
+
+    #navbar li a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: aliceblue;
+        transition: 0.3s ease;
+    }
+
+    #navbar li a:hover,
+    #navbar li a.active {
+        color: greenyellow;
+    }
+
+    #navbar li a.active::after,
+    #navbar li a:hover::after {
+        content: "";
+        width: 30%;
+        height: 2px;
+        background: greenyellow;
+        position: absolute;
+        bottom: -4px;
+        left: 20px;
+    }
+
+
+
+    #zoro {
+        background-image: url('Images/Banners/Roronoa Banner.jpg');
+        height: 100%;
+        background-size: 100vw 25vmax;
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+    }
+
+
+    #zoro .d1 {
+
+        font-size: 3vh;
+        padding-top: 2vh;
+        color: greenyellow;
+    }
+
+    #zoro .d2 {
+        font-size: 3vh;
+        color: #fff;
+        padding-bottom: 2vh;
+    }
+
+    #zoro .d3 {
+        color: #fff;
+        font-size: 2vh;
+
+    }
+
+    #zoro button {
+
+        color: black;
+        border: 0;
+        padding: 1vh;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        font-weight: 700;
+        /* font-size: ; */
+        margin-top: 1vh;
+    }
+
+    #zoro button:hover {
+        background-color: greenyellow;
+        color: #fff;
+    }
+
+    /* PRODUCT DISPLAY */
+
+    #Products {
+        text-align: center;
+    }
+
+    #Products .pro-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        flex-wrap: wrap;
+        margin: 10vw;
+    }
+
+    #Products .pro {
+        background-color: white;
+        width: 23%;
+        min-width: 99.5%;
+        padding: 10px 12px;
+        border: 1px solid #cce7d0;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+        margin: 15px 0;
+        transition: 0.2s ease;
+        position: relative;
+    }
+
+    #Products .pro:hover {
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    #Products .pro img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    #Products .pro .about {
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    #Products .pro .about span {
+        color: #606063;
+        font-size: 12px;
+    }
+
+    #Products .pro .about h5 {
+        padding-top: 7px;
+        color: #1a1a1a;
+        font-size: 14px;
+    }
+
+    #Products .pro .about h4 {
+        padding-top: 7px;
+        font-size: 15px;
+        font-weight: 700;
+        color: #088178;
+    }
+
+    #Products .pro .shopping-cart-icon {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 80px;
+        color: #088178;
+        border: 1px solid #cce7d0;
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+    }
+
+    .section-p1 {
+        border:2px solid black;
+        margin: 40px 8px;
+        margin-top: 10px;
+        background-color: rgba(255, 255, 255, 0.462);
+    }
+
+
+    /* Collections*/
+    #Collections {
+        /* padding-left: ; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #Collections .Collection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/Naruto Collection.jpg");
+        background-repeat: no-repeat;
+        min-width: 99.9%;
+        height: 45vh;
+        background-size: contain;
+        background-position: center;
+        padding: 30px;
+    }
+
+    #Collections .Collection2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/One Piece Collections.jpg");
+        background-repeat: no-repeat;
+        min-width: 99.9%;
+        height: 45vh;
+        background-size: contain;
+        background-position: center;
+        padding: 30px;
+    }
+
+    #Collections h2 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 40px;
+        padding: 10px 0;
+    }
+
+    #Collections .Collection:hover button {
+        background: greenyellow;
+        border: 1px solid #000;
+        color: #fff;
+        transition: 0.2s ease;
+    }
+
+    #Collections2 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 1px;
+    }
+
+    #Collections2 h2 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 40px;
+        padding: 10px 0;
+    }
+
+    #Collections2 .Collection3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/DBZ\ collection.jpg");
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    #Collections2 .Collection4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/Demon-Slayer Collection.jpg");
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    #Collections2 .Collection5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/JJK Collection (1).jpg");
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    #Collections2 .Collection:hover button {
+        background: greenyellow;
+        border: 1px solid #000;
+        color: #fff;
+        transition: 0.2s ease;
+    }
+
+    button.white {
+        font-size: 2vh;
+        /* font-weight: 600; */
+        padding: 1vh;
+        color: greenyellow;
+        background-color: transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s;
+    }
+
+
+}
+
+@media (min-width: 361px) and (max-width: 800px) {
+
+
+
+    #Page-Header.Contact-Header{
+        background-image: url('Images/Banners/Banner\ C.jpg');
+        height: 40vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #contact-details{
+        /* display: flex; */
+        padding: 20px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+    /* #contact-details .details{ */
+        /* width: 40%; */
+    /* } */
+    #contact-details .details span,
+    #form-details form span{
+        font-size: 12px;
+    }
+    #contact-details .details h2,
+    #form-details form h2{
+        font-size: 26px;
+        line-height: 35px;
+        padding: 20px;
+    }
+    #contact-details .details li{
+        list-style: none;
+        display: flex;
+        padding: 10px 0;
+    }
+    #contact-details .details li i{
+        font-size: 14px;
+        padding-right: 22px;
+    }
+    #contact-details .details li p{
+        margin: 0;
+        font-size: 14px;
+    }
+    #contact-details .Map{
+        /* width: 55%; */
+        height: 400px;
+    }
+    #contact-details .Map iframe{
+        width: 100%;
+        height: 100%;
+    }
+    #form-details{
+        background-color: rgba(255, 255, 255, 0.86);
+        /* display: flex; */
+        justify-content: space-between;
+        margin: 30px;
+        /* padding: 80px; */
+        border: 1px solid #e1e1e1;
+    }
+    #form-details form{
+        width: 93%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #form-details form input,
+    #form-details form textarea{
+        width: 100%;
+        padding: 12px 15px;
+        outline: none;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        border: 1px solid #e1e1e1;
+    }
+    #form-details form button{
+        background-color: rgb(126, 246, 122);
+        color: #000;
+        transition: 0.3s;
+        align-items: center;
+        margin-left: 27%;
+        margin-bottom: 15px;
+    }
+    #form-details form button:hover{
+        background-color: greenyellow;
+        color: #fff;
+    }
+    #form-details .people div{
+        padding-bottom: 25px;
+        display: flex;
+        align-items: flex-start;
+    }
+    #form-details .people div img{
+        width: 65px;
+        height: 65px;
+        object-fit: cover;
+        margin-right: 15px;
+    }
+    #form-details .people div p{
+        margin: 0;
+        font-size: 13px;
+        line-height: 25px;
+    }
+    #form-details .people div p span{
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+    }
+    
+
+
+
+    #Prodetails {
+        background-color: rgba(255, 255, 255, 0.642);
+        /* display: flex; */
+        padding: 20px;
+        margin-top: 50px;
+        margin: 2%;
+        border: 2px solid black;
+    }
+    
+    /* Single Product Details*/
+    #Prodetails .single-pro-img {
+        border: 2px solid black;
+        padding: 20px;
+        width: 100%;
+        min-height: 50vmin;
+        margin-right: 50px;
+    }
+    
+    .sub-img-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .sub-img-col {
+        flex-basis: 24%;
+        cursor: pointer;
+    }
+    
+    #Prodetails .single-pro-details {
+        width: 100%;
+        /* padding-top: 30px; */
+    }
+    
+    #Prodetails .single-pro-details input:focus {
+        outline: none;
+    }
+    
+    /* #Prodetails .single-pro-details h4 { */
+        /* padding: 40px 0 20px 0; */
+    /* } */
+    
+    #Prodetails .single-pro-details h2 {
+        font-size: 26px;
+    }
+    
+    #Prodetails .single-pro-details select {
+        display: block;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    
+    #Prodetails .single-pro-details input {
+        width: 50px;
+        height: 47px;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    
+    #Prodetails .single-pro-details button {
+        background: whitesmoke;
+        color: greenyellow;
+        white-space: nowrap;
+        border: 1px solid #000;
+    }
+    
+    #Prodetails .single-pro-details button:hover {
+        background: greenyellow;
+        color: #fff;
+    }
+    
+    #Prodetails .col1 {
+        line-height: 10px;
+    }
+    
+
+    .f1 {
+        /* margin-left: -10%; */
+        padding: 0%;
+        margin: 0%;
+        font-size: 50px;
+        /* font-size:larger; */
+        /* line-height: 1vw; */
+        color: rgb(192, 251, 75);
+    }
+
+    .auto-slider {
+        border: 2px solid black;
+        position: relative;
+        box-sizing: border-box;
+        /* Changed from content-box to border-box */
+        display: block;
+        /* Changed from inline-block to block */
+        padding: 0;
+        /* Removed padding */
+        background-color: white;
+        /* Combined background properties */
+        /* box-shadow: 0px 0px 20px rgb(25, 0, 255),
+      1px 1px 6px rgba(0, 0, 0, 0.4); */
+        /* Combined box-shadow properties */
+        /* max-width: 100%; */
+        max-height: 20vh;
+        /* Changed to 100% */
+        /* min-width: 100%; */
+        /* Changed to 100% */
+        min-height: 200px;
+        /* Set a minimum height for the slider */
+        overflow: hidden;
+    }
+
+
+    /* @keyframes sliding {
+    0% {
+      left: 0%;
+    }
+  
+    20% {
+      left: -100%;
+    }
+  
+    40% {
+      left: -200%;
+    }
+  
+    60% {
+      left: -300%;
+    }
+  
+    80% {
+      left: -400%;
+    }
+  
+    100% {
+      left: 0%;
+    }
+  }
+  
+  @keyframes indicating {
+    from {
+      left: -100%;
+    }
+  
+    to {
+      left: 0;
+    }
+  } */
+
+
+    div#slider {
+        overflow: hidden;
+    }
+
+    div#slider figure img {
+        /* width: 13%; */
+        /* margin-top: ; */
+        max-width: 115vmin;
+        max-height: 28vh;
+        float: left;
+    }
+
+    div#slider figure {
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        text-align: left;
+        font-size: 0;
+        animation: 15s sliding ease infinite;
+    }
+
+    /* Slider indicator */
+    .indicator {
+        width: 100%;
+        max-width: 100%;
+        height: 6px;
+        background: #e41b17;
+        position: absolute;
+        bottom: 0;
+
+        animation: indicating 6s ease;
+
+    }
+
+    /* .auto-slider{
+    position: relative;
+    box-sizing: content-box;
+    display: inline-block;
+    padding: 0% 10px 20px;
+    background: #ffffff00;
+    max-width: 720px;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 4px; */
+    /* box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);  */
+
+    /* } */
+    /* .indicator {
+    width: 100%;
+    max-width: 100%;
+    height: 6px;
+    background: #e41b17;
+    position: absolute;
+    bottom: 0;
+  
+    animation: indicating 5s ease infinite; */
+
+    /* } */
+
+    @keyframes sliding {
+        0% {
+            /* left: 0%; */
+        }
+
+        20% {
+            left: -100%;
+        }
+
+        40% {
+            left: -200%;
+        }
+
+        60% {
+            left: -300%;
+        }
+
+        80% {
+            /* left: -400%; */
+        }
+
+        100% {
+            /* left: 0%; */
+        }
+    }
+
+    @keyframes indicating {
+        from {
+            left: -100%;
+        }
+
+        to {
+            left: 0;
+        }
+    }
+
+
+    .section-p2 {
+
+        color: white;
+        background-color: rgba(100, 114, 206, 0.371);
+        padding: 20px;
+        /* background-color: rgb(78, 74, 74); */
+    }
+
+    h1 {
+        font-size: 50px;
+        line-height: 64px;
+        color: #222;
+    }
+
+    .f1 {
+        /* margin-left: -10%; */
+        padding: 0%;
+        margin: 0%;
+        font-size: 50px;
+        /* font-size:larger; */
+        /* line-height: 1vw; */
+        color: rgb(192, 251, 75);
+    }
+
+    h4 {
+        font-size: 20px;
+        color: #222;
+    }
+
+    h6 {
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #465b52;
+        margin: 15px 0 20px 0;
+    }
+
+
+    #header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 1vw;
+
+        background: #2b2a2a;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    .logo-container {
+        width: 10%;
+        height: auto;
+    }
+
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #navbar li {
+        list-style: none;
+        padding: 0 2vw;
+        position: relative;
+    }
+
+    #navbar li a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: aliceblue;
+        transition: 0.3s ease;
+    }
+
+    #navbar li a:hover,
+    #navbar li a.active {
+        color: greenyellow;
+    }
+
+    #navbar li a.active::after,
+    #navbar li a:hover::after {
+        content: "";
+        width: 30%;
+        height: 2px;
+        background: greenyellow;
+        position: absolute;
+        bottom: -4px;
+        left: 20px;
+    }
+
+
+
+    #zoro {
+        background-image: url('Images/Banners/Roronoa Banner.jpg');
+        height: 100%;
+        background-size: 100vw 25vmax;
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+    }
+
+
+    #zoro .d1 {
+
+        font-size: 3vh;
+        padding-top: 2vh;
+        color: greenyellow;
+    }
+
+    #zoro .d2 {
+        font-size: 3vh;
+        color: #fff;
+        padding-bottom: 2vh;
+    }
+
+    #zoro .d3 {
+        color: #fff;
+        font-size: 2vh;
+
+    }
+
+    #zoro button {
+
+        color: black;
+        border: 0;
+        padding: 1vh;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        /* font-weight: 700; */
+        /* font-size: 3vh; */
+        /* margin-top: vh; */
+    }
+
+    #zoro button:hover {
+        background-color: greenyellow;
+        color: #fff;
+    }
+
+    /* PRODUCT DISPLAY */
+
+    #Products {
+        text-align: center;
+    }
+
+    #Products .pro-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        flex-wrap: wrap;
+        margin: 10vw;
+    }
+
+    #Products .pro {
+        background-color: white;
+        width: 23%;
+        min-width: 99.5%;
+        padding: 10px 12px;
+        border: 1px solid #cce7d0;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+        margin: 15px 0;
+        transition: 0.2s ease;
+        position: relative;
+    }
+
+    #Products .pro:hover {
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    #Products .pro img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    #Products .pro .about {
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    #Products .pro .about span {
+        color: #606063;
+        font-size: 12px;
+    }
+
+    #Products .pro .about h5 {
+        padding-top: 7px;
+        color: #1a1a1a;
+        font-size: 14px;
+    }
+
+    #Products .pro .about h4 {
+        padding-top: 7px;
+        font-size: 15px;
+        font-weight: 700;
+        color: #088178;
+    }
+
+    #Products .pro .shopping-cart-icon {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 80px;
+        color: #088178;
+        border: 1px solid #cce7d0;
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+    }
+
+    .section-p1 {
+        border:2px solid black;
+        margin: 40px 8px;
+        margin-top: 10px;
+        background-color: rgba(255, 255, 255, 0.462);
+
+    }
+
+
+    /* Collections*/
+    #Collections {
+
+        /* padding-left: ; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+
+    #Collections .Collection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/Naruto Collection.jpg");
+        background-repeat: no-repeat;
+        min-width: 99.9%;
+        height: 45vh;
+        background-size: contain;
+        background-position: center;
+        padding: 30px;
+    }
+
+    #Collections .Collection2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/One Piece Collections.jpg");
+        background-repeat: no-repeat;
+        min-width: 99.9%;
+
+        height: 50vh;
+        background-size: contain;
+        background-position: center;
+        padding: 30px;
+    }
+
+    #Collections h2 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 40px;
+        padding: 10px 0;
+    }
+
+    #Collections .Collection:hover button {
+        background: greenyellow;
+        border: 1px solid #000;
+        color: #fff;
+        transition: 0.2s ease;
+    }
+
+    #Collections2 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 1px;
+    }
+
+    #Collections2 h2 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 40px;
+        padding: 10px 0;
+    }
+
+    #Collections2 .Collection3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/DBZ\ collection.jpg");
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    #Collections2 .Collection4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/Demon-Slayer Collection.jpg");
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    #Collections2 .Collection5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/JJK Collection (1).jpg");
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    #Collections2 .Collection:hover button {
+        background: greenyellow;
+        border: 1px solid #000;
+        color: #fff;
+        transition: 0.2s ease;
+    }
+
+    button.white {
+        font-size: 2vh;
+        /* font-weight: 600; */
+        padding: 1vh;
+        color: greenyellow;
+        background-color: transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s;
+
+    }
+
+
+}
+
+@media (min-width: 801px) {
+
+    
+
+
+
+
+    #Prodetails{
+        display: flex;
+        margin-top: 50px;
+    }
+    
+    
+    /* Single Product Details*/
+    #Prodetails .single-pro-img{
+        width: 40%;
+        margin-right: 50px;
+    }
+    .sub-img-group{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sub-img-col{
+        flex-basis: 24%;
+        cursor: pointer;
+    }
+    #Prodetails .single-pro-details{
+        width: 50%;
+        padding-top: 30px;
+    }
+    #Prodetails .single-pro-details input:focus{
+        outline: none;
+    }
+    #Prodetails .single-pro-details h4{
+        padding: 40px 0 20px 0;
+    }
+    #Prodetails .single-pro-details h2{
+        font-size: 26px;
+    }
+    #Prodetails .single-pro-details select{
+        display: block;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+    }
+    #Prodetails .single-pro-details input{
+        width: 50px;
+        height: 47px;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    #Prodetails .single-pro-details button{
+        background:whitesmoke;
+        color: greenyellow;
+        white-space: nowrap;
+        border: 1px solid #000;
+    }
+    #Prodetails .single-pro-details button:hover{
+        background: greenyellow;
+        color: #fff;
+    }
+    #Prodetails .col1{
+        line-height: 10px;
+    }
+    
+    
+#Page-Header.Blog-Header{
+    background-image: url('Images/Banners/Banner2.jpg');
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#Page-Header h1{
+    color: greenyellow;
+}
+#Page-Header p{
+    color: #fff;
+}
+#Blog{
+    padding: 100px 100px 0 100px;
+}
+#Blog .Blog-Box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 90px;
+}
+#Blog .Blog-Img{
+    width: 50%;
+    margin-right: 40px;
+}
+#Blog Img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+#Blog .Blog-Details{
+    width: 50%;
+}
+#Blog .Blog-Details a{
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700px;
+    color: #000;
+    position: relative;
+    transition: 0.3s;
+}
+#Blog .Blog-Details a::after{
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 4px;
+    right: -60px;
+}
+#Blog .Blog-Details a:hover{
+    color:greenyellow;
+}
+
+
+
+    .f1 {
+        /* margin-left: -10%; */
+        padding: 0%;
+        margin: 0%;
+        font-size: 50px;
+        /* font-size:larger; */
+        /* line-height: 1vw; */
+        color: rgb(192, 251, 75);
+    }
+
+
+    .auto-slider {
+        border: 2px solid black;
+        position: relative;
+        box-sizing: border-box;
+        /* Changed from content-box to border-box */
+        display: block;
+        /* Changed from inline-block to block */
+        padding: 0;
+        /* Removed padding */
+        background-color: white;
+        /* Combined background properties */
+        /* box-shadow: 0px 0px 20px rgb(25, 0, 255),
+      1px 1px 6px rgba(0, 0, 0, 0.4); */
+        /* Combined box-shadow properties */
+        /* max-width: 100%; */
+        max-height: 20vh;
+        /* Changed to 100% */
+        /* min-width: 100%; */
+        /* Changed to 100% */
+        min-height: 200px;
+        /* Set a minimum height for the slider */
+        overflow: hidden;
+    }
+
+
+    /* @keyframes sliding {
+    0% {
+      left: 0%;
+    }
+  
+    20% {
+      left: -100%;
+    }
+  
+    40% {
+      left: -200%;
+    }
+  
+    60% {
+      left: -300%;
+    }
+  
+    80% {
+      left: -400%;
+    }
+  
+    100% {
+      left: 0%;
+    }
+  }
+  
+  @keyframes indicating {
+    from {
+      left: -100%;
+    }
+  
+    to {
+      left: 0;
+    }
+  } */
+
+
+    div#slider {
+        overflow: hidden;
+    }
+
+    div#slider figure img {
+        /* width: 13%; */
+        /* margin-top: ; */
+        max-width: 115vmin;
+        max-height: 28vh;
+        float: left;
+    }
+
+    div#slider figure {
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        text-align: left;
+        font-size: 0;
+        animation: 15s sliding ease infinite;
+    }
+
+    /* Slider indicator */
+    .indicator {
+        width: 100%;
+        max-width: 100%;
+        height: 6px;
+        background: #e41b17;
+        position: absolute;
+        bottom: 0;
+
+        animation: indicating 6s ease;
+
+    }
+
+    /* .auto-slider{
+    position: relative;
+    box-sizing: content-box;
+    display: inline-block;
+    padding: 0% 10px 20px;
+    background: #ffffff00;
+    max-width: 720px;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 4px; */
+    /* box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);  */
+
+    /* } */
+    /* .indicator {
+    width: 100%;
+    max-width: 100%;
+    height: 6px;
+    background: #e41b17;
+    position: absolute;
+    bottom: 0;
+  
+    animation: indicating 5s ease infinite; */
+
+    /* } */
+
+    @keyframes sliding {
+        0% {
+            /* left: 0%; */
+        }
+
+        20% {
+            left: -100%;
+        }
+
+        40% {
+            /* left: -200%; */
+        }
+
+        60% {
+            /* left: -300%; */
+        }
+
+        80% {
+            /* left: -400%; */
+        }
+
+        100% {
+            /* left: 0%; */
+        }
+    }
+
+    @keyframes indicating {
+        from {
+            left: -100%;
+        }
+
+        to {
+            left: 0;
+        }
+    }
+
+
+    .section-p2 {
+
+        color: white;
+        background-color: rgba(255, 255, 255, 0.684);
+        padding: 20px;
+        /* background-color: rgb(78, 74, 74); */
+    }
+
+    /* h1 {
+        font-size: 50px;
+        line-height: 64px;
+        color: #222;
+    }
+
+     */
+    /* margin-left: -10%; */
+    /* padding: 0%;
+        margin: 0%;
+        font-size: 50px; */
+    /* font-size:larger; */
+    /* line-height: 1vw; */
+    /* color: #222;
+    }
+
+    h4 {
+        font-size: 20px;
+        color: #222;
+    }
+
+    h6 {
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #465b52;
+        margin: 15px 0 20px 0;
+    }
+
+
+    #header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 1vw;
+
+        background: #2b2a2a;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    .logo-container {
+        width: 10%;
+        height: auto;
+    }
+
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #navbar li {
+        list-style: none;
+        padding: 0 2vw;
+        position: relative;
+    }
+
+    #navbar li a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: aliceblue;
+        transition: 0.3s ease;
+    }
+
+    #navbar li a:hover,
+    #navbar li a.active {
+        color: greenyellow;
+    }
+
+    #navbar li a.active::after,
+    #navbar li a:hover::after {
+        content: "";
+        width: 30%;
+        height: 2px;
+        background: greenyellow;
+        position: absolute;
+        bottom: -4px;
+        left: 20px;
+    }
+
+
+
+    #zoro {
+        background-image: url('Images/Banners/Roronoa Banner.jpg');
+        height: 100%;
+        background-size: 100vw 25vmax;
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+    }
+
+
+    #zoro .d1 {
+
+        font-size: 3vh;
+        padding-top: 2vh;
+        color: greenyellow;
+    }
+
+    #zoro .d2 {
+        font-size: 3vh;
+        color: #fff;
+        padding-bottom: 2vh;
+    }
+
+    #zoro .d3 {
+        color: #fff;
+        font-size: 2vh;
+
+    }
+
+    #zoro button {
+
+        color: black;
+        border: 0;
+        padding: 1vh;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 3vh;
+        margin-top: 2.3vh;
+    }
+
+    #zoro button:hover {
+        background-color: greenyellow;
+        color: #fff;
+    } */
+
+    /* PRODUCT DISPLAY */
+
+    /* #Products {
+        text-align: center;
+    }
+
+    #Products .pro-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        flex-wrap: wrap;
+        margin: 10vw;
+    }
+
+    #Products .pro {
+        background-color: white;
+        width: 23%; */
+    /* min-width: 99.5%; */
+    /* padding: 10px 12px;
+        border: 1px solid #cce7d0;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+        margin: 15px 0;
+        transition: 0.2s ease;
+        position: relative;
+    }
+
+    #Products .pro:hover {
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    #Products .pro img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    #Products .pro .about {
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    #Products .pro .about span {
+        color: #606063;
+        font-size: 12px;
+    }
+
+    #Products .pro .about h5 {
+        padding-top: 7px;
+        color: #1a1a1a;
+        font-size: 14px;
+    }
+
+    #Products .pro .about h4 {
+        padding-top: 7px;
+        font-size: 15px;
+        font-weight: 700;
+        color: #088178;
+    }
+
+    #Products .pro .shopping-cart-icon {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 80px;
+        color: #088178;
+        border: 1px solid #cce7d0;
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+    }
+
+    .section-p1 {
+        border: 2px solid white;
+        margin: 40px 8px;
+        margin-top: 10px;
+    } */
+
+
+    /* Collections*/
+    /* #Collections { */
+
+    /* padding-left: ; */
+    /* display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+
+    #Collections .Collection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/Naruto Collection.jpg");
+        background-repeat: no-repeat;
+        min-width: 99.9%;
+        height: 45vh;
+        background-size: contain;
+        background-position: center;
+        padding: 30px;
+    }
+
+    #Collections .Collection2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/One Piece Collections.jpg");
+        background-repeat: no-repeat;
+        min-width: 99.9%;
+
+        height: 50vh;
+        background-size: contain;
+        background-position: center;
+        padding: 30px;
+    }
+
+    #Collections h2 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 40px;
+        padding: 10px 0;
+    }
+
+    #Collections .Collection:hover button {
+        background: greenyellow;
+        border: 1px solid #000;
+        color: #fff;
+        transition: 0.2s ease;
+    }
+
+    #Collections2 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 1px;
+    }
+
+    #Collections2 h2 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 40px;
+        padding: 10px 0;
+    }
+
+    #Collections2 .Collection3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/DBZ\ collection.jpg");
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    #Collections2 .Collection4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/Demon-Slayer Collection.jpg");
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    #Collections2 .Collection5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("Images/Collections/JJK Collection (1).jpg");
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    #Collections2 .Collection:hover button {
+        background: greenyellow;
+        border: 1px solid #000;
+        color: #fff;
+        transition: 0.2s ease;
+    }
+
+    button.white {
+        font-size: 2vh; */
+    /* font-weight: 600; */
+    /* padding: 1vh;
+        color: greenyellow;
+        background-color: transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s;
+        margin-left: 20%;
+    }  */
+    
+    /* CONTACT SECTION */
+    #Page-Header.Contact-Header{
+        background-image: url('Images/Banners/Banner\ C.jpg');
+        height: 40vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #contact-details{
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.822);
+        align-items: center;
+        padding: 20px;
+        justify-content: space-between;
+    }
+    #contact-details .details{
+        width: 40%;
+    }
+    #contact-details .details span,
+    #form-details form span{
+        font-size: 12px;
+    }
+    #contact-details .details h2,
+    #form-details form h2{
+        font-size: 26px;
+        line-height: 35px;
+        padding: 20px 0;
+    }
+    #contact-details .details li{
+        list-style: none;
+        display: flex;
+        padding: 10px 0;
+    }
+    #contact-details .details li i{
+        font-size: 14px;
+        padding-right: 22px;
+    }
+    #contact-details .details li p{
+        margin: 0;
+        font-size: 14px;
+    }
+    #contact-details .Map{
+        width: 55%;
+        height: 400px;
+    }
+    #contact-details .Map iframe{
+        width: 100%;
+        height: 100%;
+    }
+    #form-details{
+        display: flex;
+        background-color: white;
+    
+        justify-content: space-between;
+        margin: 30px;
+        padding: 80px;
+        border: 1px solid #e1e1e1;
+    }
+    #form-details form{
+        padding: 20px;
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #form-details form input,
+    #form-details form textarea{
+        width: 100%;
+        padding: 12px 15px;
+        outline: none;
+        margin-bottom: 20px;
+        border: 1px solid #e1e1e1;
+    }
+    #form-details form button{
+        background-color: gainsboro;
+        color: #000;
+        transition: 0.3s;
+    }
+    #form-details form button:hover{
+        background-color: greenyellow;
+        color: #fff;
+    }
+    #form-details .people div{
+        padding-bottom: 25px;
+        display: flex;
+        align-items: flex-start;
+    }
+    #form-details .people div img{
+        width: 65px;
+        height: 65px;
+        object-fit: cover;
+        margin-right: 15px;
+    }
+    #form-details .people div p{
+        margin: 0;
+        font-size: 13px;
+        line-height: 25px;
+    }
+    #form-details .people div p span{
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+    }
+}
