@@ -648,6 +648,7 @@ footer .Copyright {
 }
 
 #SBanner h2 {
+    
     color: #fff;
 }
 
@@ -905,6 +906,34 @@ footer .Copyright {
 /* MEDIA QUERY*/
 
 @media (max-width: 360px) {
+
+/* Single Product Banner*/
+
+#SBanner {
+    margin-top: 20px;
+    background-image: url('Images/Banners/SBanner1.jpg');
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    /* font-size: 2vh; */
+}
+
+#SBanner h2 {
+    font-size: 3vh;
+    color: #fff;
+}
+
+#SBanner span {
+    color: greenyellow;
+}
+
+
 
 
     #Page-Header.Contact-Header{
@@ -1681,6 +1710,98 @@ footer .Copyright {
 @media (min-width: 361px) and (max-width: 800px) {
 
 
+
+    #Page-Header.About-Header {
+        background-image: url('Images/Banners/About\ Banner.png');
+        height: 40vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #About-Head {
+        display:block;
+        align-items: center;
+        font-size: 3vw;
+    }
+    
+    #About-Head img {
+        width: 100%;
+        height: auto;
+    }
+    #About-Head  h1{
+        font-size: 10vw;
+    }
+    
+    #About-Head div {
+        padding: 10px;
+    }
+    
+    #About-Video {
+    
+        text-align: center;
+        color: greenyellow;
+        font-size: 10vw;
+    }
+
+
+    
+    #About-Video h1{
+        color: greenyellow;
+    }
+    #About-Video b{
+        color: white;
+        font-size: 10vw;
+    }
+    
+    #About-Video .video {
+        width: 70%;
+        height: 100%;
+        margin: 30px auto 0 auto;
+    }
+    
+    #About-Video .video video {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    
+    
+    
+
+
+
+
+
+    #SBanner {
+        margin-top: 20px;
+        background-image: url('Images/Banners/SBanner1.jpg');
+        height: 30vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        /* font-size: 2vh; */
+    }
+    
+    #SBanner h2 {
+        font-size: 3vh;
+        color: #fff;
+    }
+    
+    #SBanner span {
+        color: greenyellow;
+    }
+    
 
     #Page-Header.Contact-Header{
         background-image: url('Images/Banners/Banner\ C.jpg');
