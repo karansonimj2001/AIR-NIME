@@ -5,19 +5,54 @@
     font-family: "spartan", sans-serif;
 }
 
+#Products .pro img {
+    width: 100%;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+#Products .pro:hover img {
+    opacity: 0;
+}
+
+#Products .pro img.second-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100%;
+    height: 100%; */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#Products .pro:hover img.second-image {
+    opacity: 1;
+}
 body {
     background-image: url("wal4.png");
 }
 
-.amount {
-    /* margin-top: 20px; */
+#Products .pro .about .amount {
+    display: inline-block;
     position: relative;
+    font-size: 15px;
+    font-weight: 700;
     color: #088178;
+}
+
+#Products .pro .about .amount::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid red; /* Adjust color to match your design */
+    transform: translateY(-50%);
 }
 
 .newprice {
     /* display: inline-block; */
-    font-size: 20px;
+    /* font-size: 20px; */
     color: green;
     padding: 10px;
     display: flex;
@@ -28,7 +63,7 @@ body {
 
 .amount::after {
     content: "";
-    width: 110%;
+    width: 10%;
     height: 1.5px;
     background: black;
     position: absolute;
@@ -285,7 +320,6 @@ body {
     justify-content: space-between;
     padding-top: 20px;
     flex-wrap: wrap;
-    margin: 10px;
 }
 
 #Products .pro {
@@ -1499,84 +1533,122 @@ footer .Copyright {
     }
 
     /* PRODUCT DISPLAY */
+/* PRODUCT DISPLAY */
+#Products {
+    text-align: center;
+}
 
-    #Products {
-        text-align: center;
-    }
+#Products .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
 
-    #Products .pro-container {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 20px;
-        flex-wrap: wrap;
-        margin: 10vw;
-    }
+#Products .pro {
+    background-color: white;
+    width: 48%; /* Adjusted width for two products per row */
+    min-width: 48%; /* Ensuring minimum width matches */
+    padding: 1px;
+    border: 1px solid #cce7d0;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 1%; /* Added margin for spacing between columns */
+    transition: 0.2s ease;
+    position: relative;
+    overflow: hidden; /* Ensure the hidden overflow */
+}
 
-    #Products .pro {
-        background-color: white;
-        width: 23%;
-        min-width: 99.5%;
-        padding: 10px 12px;
-        border: 1px solid #cce7d0;
-        border-radius: 25px;
-        cursor: pointer;
-        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-        margin: 15px 0;
-        transition: 0.2s ease;
-        position: relative;
-    }
+#Products .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
 
-    #Products .pro:hover {
-        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
-    }
+#Products .pro img {
+    width: 100%;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
 
-    #Products .pro img {
-        width: 100%;
-        border-radius: 20px;
-    }
+#Products .pro:hover img {
+    opacity: 0;
+}
 
-    #Products .pro .about {
-        text-align: left;
-        padding: 10px 0;
-    }
+#Products .pro img.second-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100%;
+    height: 100%; */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
-    #Products .pro .about span {
-        color: #606063;
-        font-size: 12px;
-    }
+#Products .pro:hover img.second-image {
+    opacity: 1;
+}
 
-    #Products .pro .about h5 {
-        padding-top: 7px;
-        color: #1a1a1a;
-        font-size: 14px;
-    }
+#Products .pro .about {
+    text-align: left;
+    padding: 10px 0;
+}
 
-    #Products .pro .about h4 {
-        padding-top: 7px;
-        font-size: 15px;
-        font-weight: 700;
-        color: #088178;
-    }
+#Products .pro .about span {
+    color: #606063;
+    font-size: 12px;
+}
 
-    #Products .pro .shopping-cart-icon {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        border-radius: 80px;
-        color: #088178;
-        border: 1px solid #cce7d0;
-        position: absolute;
-        bottom: 20px;
-        right: 10px;
-    }
+#Products .pro .about h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
 
-    .section-p1 {
-        border:2px solid black;
-        margin: 40px 8px;
-        margin-top: 10px;
-        background-color: rgba(255, 255, 255, 0.462);
-    }
+#Products .pro .about h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+    position: relative;
+    display: inline-block;
+}
 
+#Products .pro .about .amount {
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#Products .pro .about .amount::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid red; /* Adjust color to match your design */
+    transform: translateY(-50%);
+}
+
+#Products .pro .shopping-cart-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 80px;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+.section-p1 {
+    border: 2px solid black;
+    margin: 0px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.462);
+}
 
     /* Collections*/
     #Collections {
@@ -2322,7 +2394,7 @@ footer .Copyright {
         justify-content: space-between;
         padding-top: 20px;
         flex-wrap: wrap;
-        margin: 10vw;
+        /* margin: 10vw; */
     }
 
     #Products .pro {
@@ -2527,6 +2599,23 @@ footer .Copyright {
 
 @media (min-width: 801px) {
 
+    #Products .pro .about .amount {
+        display: inline-block;
+        position: relative;
+        font-size: 15px;
+        font-weight: 700;
+        color: #088178;
+    }
+    
+    #Products .pro .about .amount::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid red; /* Adjust color to match your design */
+        transform: translateY(-50%);
+    }
     
 
 
