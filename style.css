@@ -939,7 +939,7 @@ footer .Copyright {
 }
 /* MEDIA QUERY*/
 
-@media (max-width: 360px) {
+@media (max-width: 425px) {
 
 /* Single Product Banner*/
 
@@ -1779,7 +1779,7 @@ footer .Copyright {
 
 }
 
-@media (min-width: 361px) and (max-width: 800px) {
+@media (min-width: 426px) and (max-width: 800px) {
 
 
 
