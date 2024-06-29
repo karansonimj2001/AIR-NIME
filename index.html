@@ -360,7 +360,7 @@
                 <a href="#">Sign In</a>
                 <a href="#">View Cart</a>
                 <a href="#">Track My Order</a>
-                <a href="#">Help</a>
+                <a href="contact.html">Help</a>
             </div>
             <div class="col install">
                 <p>Secured Payment Gateways</p>
@@ -396,6 +396,7 @@
         <section id="SBanner">
             <span onclick="window.location.href='https://chat.whatsapp.com/HSF7Ohi3Wym7ILaDd3IF9s';">Click Here</span>
             <h2> To Join <span>Our Whatsapp Group</span> and Get <span>Free</span> Exicting Gifts</h2>
+
             <h2>Buy <span>Any Product</span> and Get a <span>Free</span> Anime Goodie</h2>
         </section>
         <section id="Prodetails" class="section-p1">
@@ -408,28 +409,27 @@
                     <div class="sub-img">
                         <img src="lufyytshirt/1.png" width="100%" class="sub-img" alt="">
                     </div>
-                    <!-- <div class="sub-img-col" onclick="display('sectionLuffy')"> -->
-                        <!-- <img src="Images/Products/Product Luffy.jpg" width="100%" class="sub-img" alt=""> -->
-                    <!-- </div> -->
-                    <!-- <div class="sub-img-col" onclick="display('sectionNaruto')"> -->
-                        <!-- <img src="Images/Products/Product naruto.jpg" width="100%" class="sub-img" alt=""> -->
-                    <!-- </div> -->
                 </div>
             </div>
             <div class="single-pro-details">
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
-                <h4>Luffy O-sized T-shirt</h4>
+                <h4 id="codename1">Luffy O-sized T-shirt</h4>
                 <h2>₹649</h2>
-                <!-- <select>
+                <select id="size1">
                     <option>Select Size</option>
                     <option>S</option>
                     <option>M</option>
                     <option>L</option>
                     <option>XL</option>
-                    <option>XXL</option>
                 </select>
-                <input type="number" value="1"> -->
-                <button class="normal" onclick="window.location.href='https://wa.link/84e0fu';">Buy Now</button>
+                <select id="colour1">
+                    <option>Select Color</option>
+                    <option>White</option>
+                    <option>Black</option>
+                    <option>Lavender</option>
+                </select>
+                <input id="quantity1" type="number" value="1">
+                <button class="normal" onclick="sendwhatsapp1();">Buy Now</button>
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -510,6 +510,7 @@
                 </div>
             </div>
         </section>
+        
         <section id="Updates" class="section-p1 section-m1">
             <div class="up">
                 <h4>Sign Up for Updates</h4>
@@ -549,7 +550,7 @@
                 <a href="#">Sign In</a>
                 <a href="#">View Cart</a>
                 <a href="#">Track My Order</a>
-                <a href="#">Help</a>
+                <a href="contact.html">Help</a>
             </div>
             <div class="col install">
                 <p>Secured Payment Gateways</p>
@@ -559,24 +560,23 @@
                 <p>© 2024, Air-Nime| All Rights Reserved</p>
             </div>
         </footer>
-        <!-- <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script> -->
-
+                <script>
+                    function sendwhatsapp1(){
+                        var phonenumber = "919315000210";
+                        var Name = document.getElementById("codename1").innerText;
+                        var Size = document.getElementById("size1").value;
+                        var Quantity = document.getElementById("quantity1").value;
+                        var Color = document.getElementById("colour1").value;
+        
+                        var url = "https://wa.me/" + phonenumber + "?text="
+                        +"*Name :* "+Name+"%0a"
+                        +"*Size :* "+Size+"%0a"
+                        +"*Quantity:* " +Quantity+"%0a"
+                        +"*Color :* " +Color+"%0a%0a"
+                        +"*Pls Tell Me About the Availability.*";
+                        window.open(url, '_blank').focus();
+                    }
+                </script>
 
     </div>
 
@@ -631,30 +631,33 @@
             <div class="single-pro-img">
                 <img src="marco/1.png" width="100%" id="MainImg" alt="">
                 <div class="sub-img-group">
-                    <!-- <div class="sub-img-col" onclick="display('sectionJoyboy')"> -->
                     <div class="sub-img">
                         <img src="marco/1.png" width="100%" class="sub-img" alt="">
                     </div>
                     <div class="sub-img">
                         <img src="marco/2.png" width="100%" class="sub-img" alt="">
-                    </div>
-                    
+                    </div>               
                 </div>
             </div>
             <div class="single-pro-details">
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
-                <h4>Marco The Phoenix</h4>
+                <h4 id="codename2">Marco The Phoenix</h4>
                 <h2>₹649</h2>
-                <!-- <select>
+                <select id="size2">
                     <option>Select Size</option>
                     <option>S</option>
                     <option>M</option>
                     <option>L</option>
                     <option>XL</option>
-                    <option>XXL</option>
                 </select>
-                <input type="number" value="1"> -->
-                <button class="normal" onclick="window.location.href='https://wa.link/jetj1l';">Buy Now</button>
+                <select id="colour2">
+                    <option>Select Color</option>
+                    <option>White</option>
+                    <option>Black</option>
+                    <option>Lavender</option>
+                </select>
+                <input id="quantity2" type="number" value="1">
+                <button class="normal" onclick="sendwhatsapp2();">Buy Now</button>
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -774,7 +777,7 @@
                 <a href="#">Sign In</a>
                 <a href="#">View Cart</a>
                 <a href="#">Track My Order</a>
-                <a href="#">Help</a>
+                <a href="contact.html">Help</a>
             </div>
             <div class="col install">
                 <p>Secured Payment Gateways</p>
@@ -784,29 +787,24 @@
                 <p>© 2024, Air-Nime| All Rights Reserved</p>
             </div>
         </footer>
-        <!-- <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script> -->
-        <script src="script.js"></script>
-
+                <script>
+                    function sendwhatsapp2(){
+                        var phonenumber = "919315000210";
+                        var Name = document.getElementById("codename2").innerText;
+                        var Size = document.getElementById("size2").value;
+                        var Quantity = document.getElementById("quantity2").value;
+                        var Color = document.getElementById("colour2").value;
+        
+                        var url = "https://wa.me/" + phonenumber + "?text="
+                        +"*Name :* "+Name+"%0a"
+                        +"*Size :* "+Size+"%0a"
+                        +"*Quantity:* " +Quantity+"%0a"
+                        +"*Color :* " +Color+"%0a%0a"
+                        +"*Pls Tell Me About the Availability.*";
+                        window.open(url, '_blank').focus();
+                    }
+                </script>
     </div>
-
-
-
 
 
 
@@ -864,209 +862,23 @@
             </div>
             <div class="single-pro-details">
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
-                <h4>Luffy O-sized T-shirt</h4>
+                <h4 id="codename3">Monkey D Luffy</h4>
                 <h2>₹649</h2>
-                <!-- <select>
+                <select id="size3">
                     <option>Select Size</option>
                     <option>S</option>
                     <option>M</option>
                     <option>L</option>
                     <option>XL</option>
-                    <option>XXL</option>
                 </select>
-                <input type="number" value="1"> -->
-                <button class="normal" onclick="window.location.href='https://wa.link/g6wr0f';">Buy Now</button>
-                <h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>
-                </div>
-            </div>
-        </section>
-        <section id="Products" class="section-p1">
-            <h2> Featured products </h2>
-            <p>Summer Collection New Modern Designs</p>
-            <div class="pro-container">
-                <div class="pro" onclick="display('sectionNaruto')">
-                    <img src="lufyytshirt/2.png" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy T-shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionMarco')">
-                    <img src="marco/1.png" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Marco T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionLuffy')">
-                    <img src="luffy sitting/2.png" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Luffy T-Shirt</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-                <div class="pro" onclick="display('sectionJoyboy')">
-                    <img src="power/1.png" alt="">
-                    <div class="about">
-                        <span>Air-nime</span>
-                        <h5>Fear No One</h5> 
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4>₹649</h4>
-                    </div>
-                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
-                </div>
-            </div>
-        </section>
-        <div class="logo-container section-p1">
-            <img src="Images/Logo1.png" alt="Website Logo">
-        </div>
-        <footer class="section-p1">
-            <div class="col">
-                <h4>Contact</h4>
-                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
-                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
-            </div>
-            <div class="Follow">
-                <h4>Follow us</h4>
-                <i class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </i>
-            </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-            <div class="col install">
-                <p>Secured Payment Gateways</p>
-                <img src="Images/pay.png" alt="Payment">
-            </div>
-            <div class="Copyright">
-                <p>© 2024, Air-Nime| All Rights Reserved</p>
-            </div>
-        </footer>
-        <!-- <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script> -->
-
-    </div>
-
-
-
-
-
-    <div id="sectionJoyboy">
-        <section id="header">
-            <div class="logo-container">
-                <img src="Images/logo.png" alt="Website Logo">
-            </div>
-
-            <div>
-                <ul id="navbar">
-                    <li><a href="index.html">home</a></li>
-                    <li><a class="active" href="shop.html">shop</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
-                </ul>
-            </div>
-        </section>
-        <section id="SBanner">
-            <span onclick="window.location.href='https://chat.whatsapp.com/HSF7Ohi3Wym7ILaDd3IF9s';">Click Here</span>
-            <h2> To Join <span>Our Whatsapp Group</span> and Get <span>Free</span> Exicting Gifts</h2>
-            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> Anime Goodie</h2>
-        </section>
-        <section id="Prodetails" class="section-p1">
-            <div class="single-pro-img">
-                <img src="power/1.png" width="100%" id="MainImg" alt="">
-                <div class="sub-img-group">
-                    <div class="sub-img" >
-                        <img src="power/1.png" width="100%" class="sub-img" alt="">
-                    </div>
-                    <div class="sub-img" >
-                        <img src="power/2.png" width="100%" class="sub-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="single-pro-details">
-                <h6><a href="index.html">Home</a>/T-Shirt</h6>
-                <h4>Fear No One O-sized T-shirt</h4>
-                <h2>₹649</h2>
-                <!-- <select>
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                    <option>XXL</option>
+                <select id="colour3">
+                    <option>Select Color</option>
+                    <option>White</option>
+                    <option>Black</option>
+                    <option>Lavender</option>
                 </select>
-                <input type="number" value="1"> -->
-                <button class="normal" onclick="window.location.href='https://wa.link/tlwm4d';">Buy Now</button>
+                <input id="quantity3" type="number" value="1">
+                <button class="normal" onclick="sendwhatsapp3();">Buy Now</button>
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -1186,7 +998,7 @@
                 <a href="#">Sign In</a>
                 <a href="#">View Cart</a>
                 <a href="#">Track My Order</a>
-                <a href="#">Help</a>
+                <a href="contact.html">Help</a>
             </div>
             <div class="col install">
                 <p>Secured Payment Gateways</p>
@@ -1196,25 +1008,229 @@
                 <p>© 2024, Air-Nime| All Rights Reserved</p>
             </div>
         </footer>
-        <!-- <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
+        <script>
+            function sendwhatsapp3(){
+                var phonenumber = "919315000210";
+                var Name = document.getElementById("codename3").innerText;
+                var Size = document.getElementById("size3").value;
+                var Quantity = document.getElementById("quantity3").value;
+                var Color = document.getElementById("colour3").value;
 
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
+                var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Name :* "+Name+"%0a"
+                +"*Size :* "+Size+"%0a"
+                +"*Quantity:* " +Quantity+"%0a"
+                +"*Color :* " +Color+"%0a%0a"
+                +"*Pls Tell Me About the Availability.*";
+                window.open(url, '_blank').focus();
             }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script> -->
-
+        </script>
     </div>
+
+
+
+
+    <div id="sectionJoyboy">
+        <section id="header">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Website Logo">
+            </div>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="active" href="shop.html">shop</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li> -->
+                </ul>
+            </div>
+        </section>
+        <section id="SBanner">
+            <span onclick="window.location.href='https://chat.whatsapp.com/HSF7Ohi3Wym7ILaDd3IF9s';">Click Here</span>
+            <h2> To Join <span>Our Whatsapp Group</span> and Get <span>Free</span> Exicting Gifts</h2>
+            <h2>Buy <span>Any Product</span> and Get a <span>Free</span> Anime Goodie</h2>
+        </section>
+        <section id="Prodetails" class="section-p1">
+            <div class="single-pro-img">
+                <img src="power/1.png" width="100%" id="MainImg" alt="">
+                <div class="sub-img-group">
+                    <div class="sub-img" >
+                        <img src="power/1.png" width="100%" class="sub-img" alt="">
+                    </div>
+                    <div class="sub-img" >
+                        <img src="power/2.png" width="100%" class="sub-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-pro-details">
+                <h6><a href="index.html">Home</a>/T-Shirt</h6>
+                <h4 id="codename4">FEAR NO ONE</h4>
+                <h2>₹649</h2>
+                <select id="size4">
+                    <option>Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+                <select id="colour4">
+                    <option>Select Color</option>
+                    <option>White</option>
+                    <option>Black</option>
+                    <option>Lavender</option>
+                </select>
+                <input id="quantity4" type="number" value="1">
+                <button class="normal" onclick="sendwhatsapp4();">Buy Now</button>
+                <h4>Product Details</h4>
+                <div class="col1">
+                    <p>✦ 100 % cotton</p>
+                    <p>✦ Pre-Shrunk</p>
+                    <p>✦ Bio-Washed</p>
+                    <p>✦ Super Combed</p>
+                    <p>✦ Air-Nime | Anime in the Air </p>
+                </div>
+            </div>
+        </section>
+        <section id="Products" class="section-p1">
+            <h2> Featured products </h2>
+            <p>Summer Collection New Modern Designs</p>
+            <div class="pro-container">
+                <div class="pro" onclick="display('sectionNaruto')">
+                    <img src="lufyytshirt/2.png" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy T-shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionMarco')">
+                    <img src="marco/1.png" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Marco T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionLuffy')">
+                    <img src="luffy sitting/2.png" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Luffy T-Shirt</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+                <div class="pro" onclick="display('sectionJoyboy')">
+                    <img src="power/1.png" alt="">
+                    <div class="about">
+                        <span>Air-nime</span>
+                        <h5>Fear No One</h5> 
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h4>₹649</h4>
+                    </div>
+                    <a href="#"><i class="fas fa-shopping-cart shopping-cart-icon"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="Updates" class="section-p1 section-m1">
+            <div class="up">
+                <h4>Sign Up for Updates</h4>
+                <p>Get E-Mail Updates about New Products and Offers</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your E-Mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+        <div class="logo-container section-p1">
+            <img src="Images/Logo1.png" alt="Website Logo">
+        </div>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>E-Mail: </strong> Soni.110051@gmail.com /Priyanshut9810@gmail.com</p>
+                <p><strong>Phone: </strong> (+91) 9625670484 /(+91) 9315000210</p>
+            </div>
+            <div class="Follow">
+                <h4>Follow us</h4>
+                <i class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </i>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Order</a>
+                <a href="contact.html">Help</a>
+            </div>
+            <div class="col install">
+                <p>Secured Payment Gateways</p>
+                <img src="Images/pay.png" alt="Payment">
+            </div>
+            <div class="Copyright">
+                <p>© 2024, Air-Nime| All Rights Reserved</p>
+            </div>
+        </footer>
+        <script>
+            function sendwhatsapp4(){
+                var phonenumber = "919315000210";
+                var Name = document.getElementById("codename4").innerText;
+                var Size = document.getElementById("size4").value;
+                var Quantity = document.getElementById("quantity4").value;
+                var Color = document.getElementById("colour4").value;
+
+                var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Name :* "+Name+"%0a"
+                +"*Size :* "+Size+"%0a"
+                +"*Quantity:* " +Quantity+"%0a"
+                +"*Color :* " +Color+"%0a%0a"
+                +"*Pls Tell Me About the Availability.*";
+                window.open(url, '_blank').focus();
+            }
+        </script>
+    </div>
+
 
 
 
@@ -1267,14 +1283,6 @@
                 <h2>SOLD OUT</h2>
                 <!-- <input type="number" value="1"> -->
                 <button class="normal" onclick="window.location.href='https://wa.link/eh1rue';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
             </div>
         </section>
         <section id="Products" class="section-p1">
@@ -1386,7 +1394,7 @@
                 <a href="#">Sign In</a>
                 <a href="#">View Cart</a>
                 <a href="#">Track My Order</a>
-                <a href="#">Help</a>
+                <a href="contact.html">Help</a>
             </div>
             <div class="col install">
                 <p>Secured Payment Gateways</p>
@@ -1396,25 +1404,6 @@
                 <p>© 2024, Air-Nime| All Rights Reserved</p>
             </div>
         </footer>
-        <!-- <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script> -->
-        <script src="script.js"></script>
     </div>
 
 
@@ -1468,14 +1457,6 @@
                 <h2>SOLD OUT</h2>
                 <!-- <input type="number" value="1"> -->
                 <button class="normal" onclick="window.location.href='https://wa.link/3qsvza';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
             </div>
         </section>
         <section id="Products" class="section-p1">
@@ -1587,7 +1568,7 @@
                 <a href="#">Sign In</a>
                 <a href="#">View Cart</a>
                 <a href="#">Track My Order</a>
-                <a href="#">Help</a>
+                <a href="contact.html">Help</a>
             </div>
             <div class="col install">
                 <p>Secured Payment Gateways</p>
@@ -1597,25 +1578,6 @@
                 <p>© 2024, Air-Nime| All Rights Reserved</p>
             </div>
         </footer>
-        <!-- <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script> -->
-        <script src="script.js"></script>
     </div>
 
 
@@ -1671,14 +1633,6 @@
                 <h2>₹549</h2>
                 <!-- <input type="number" value="1"> -->
                 <button class="normal" onclick="window.location.href='https://wa.link/d4s4z8';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
             </div>
         </section>
         <section id="Products" class="section-p1">
@@ -1800,25 +1754,6 @@
                 <p>© 2024, Air-Nime| All Rights Reserved</p>
             </div>
         </footer>
-        <!-- <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script> -->
-        <script src="script.js"></script>
     </div>
 
 
@@ -1873,14 +1808,6 @@
                 <h2>₹1499</h2>
                 <!-- <input type="number" value="1"> -->
                 <button class="normal" onclick="window.location.href='https://wa.link/cqncvp';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
             </div>
         </section>
         <section id="Products" class="section-p1">
@@ -1992,7 +1919,7 @@
                 <a href="#">Sign In</a>
                 <a href="#">View Cart</a>
                 <a href="#">Track My Order</a>
-                <a href="#">Help</a>
+                <a href="contact.html">Help</a>
             </div>
             <div class="col install">
                 <p>Secured Payment Gateways</p>
@@ -2002,25 +1929,6 @@
                 <p>© 2024, Air-Nime| All Rights Reserved</p>
             </div>
         </footer>
-        <!-- <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script> -->
-        <script src="script.js"></script>
     </div>
 
 
@@ -2074,14 +1982,6 @@
                 <h2>₹599</h2>
                 <!-- <input type="number" value="1"> -->
                 <button class="normal" onclick="window.location.href='https://wa.link/ae5d0m';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
             </div>
         </section>
         <section id="Products" class="section-p1">
@@ -2193,7 +2093,7 @@
                 <a href="#">Sign In</a>
                 <a href="#">View Cart</a>
                 <a href="#">Track My Order</a>
-                <a href="#">Help</a>
+                <a href="contact.html">Help</a>
             </div>
             <div class="col install">
                 <p>Secured Payment Gateways</p>
@@ -2203,27 +2103,6 @@
                 <p>© 2024, Air-Nime| All Rights Reserved</p>
             </div>
         </footer>
-        <!-- <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script> -->
-        <script src="script.js"></script>
-
-
     </div>
 
 
@@ -2278,14 +2157,6 @@
                 <h2>₹499</h2>
                 <!-- <input type="number" value="1"> -->
                 <button class="normal" onclick="window.location.href='https://wa.link/0q7lv9';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
             </div>
         </section>
         <section id="Products" class="section-p1">
@@ -2397,7 +2268,7 @@
                 <a href="#">Sign In</a>
                 <a href="#">View Cart</a>
                 <a href="#">Track My Order</a>
-                <a href="#">Help</a>
+                <a href="contact.html">Help</a>
             </div>
             <div class="col install">
                 <p>Secured Payment Gateways</p>
@@ -2407,25 +2278,6 @@
                 <p>© 2024, Air-Nime| All Rights Reserved</p>
             </div>
         </footer>
-        <!-- <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script> -->
-        <script src="script.js"></script>
     </div>
 
 
@@ -2476,14 +2328,6 @@
                 <h2>₹899</h2>
                 <!-- <input type="number" value="1"> -->
                 <button class="normal" onclick="window.location.href='https://wa.link/pwy47y';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
             </div>
         </section>
         <section id="Products" class="section-p1">
@@ -2595,7 +2439,7 @@
                 <a href="#">Sign In</a>
                 <a href="#">View Cart</a>
                 <a href="#">Track My Order</a>
-                <a href="#">Help</a>
+                <a href="contact.html">Help</a>
             </div>
             <div class="col install">
                 <p>Secured Payment Gateways</p>
@@ -2605,25 +2449,6 @@
                 <p>© 2024, Air-Nime| All Rights Reserved</p>
             </div>
         </footer>
-        <!-- <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-        </script>
-        <script src="script.js"></script> -->
-        <script src="script.js"></script>
     </div>
 
 
@@ -2675,14 +2500,6 @@
                 <h2>₹249</h2>
                 <!-- <input type="number" value="1"> -->
                 <button class="normal" onclick="window.location.href='https://wa.link/ka68mw';">Buy Now</button>
-                <!--<h4>Product Details</h4>
-                <div class="col1">
-                    <p>✦ 100 % cotton</p>
-                    <p>✦ Pre-Shrunk</p>
-                    <p>✦ Bio-Washed</p>
-                    <p>✦ Super Combed</p>
-                    <p>✦ Air-Nime | Anime in the Air </p>  
-                </div>-->
             </div>
         </section>
         <section id="Products" class="section-p1">
@@ -2794,7 +2611,7 @@
                 <a href="#">Sign In</a>
                 <a href="#">View Cart</a>
                 <a href="#">Track My Order</a>
-                <a href="#">Help</a>
+                <a href="contact.html">Help</a>
             </div>
             <div class="col install">
                 <p>Secured Payment Gateways</p>
@@ -2804,24 +2621,6 @@
                 <p>© 2024, Air-Nime| All Rights Reserved</p>
             </div>
         </footer>
-        <!-- <script>
-            var MainImg = document.getElementById("MainImg");
-            var SmallImg = document.getElementsByClassName("sub-img");
-
-            SmallImg[0].onclick = function () {
-                MainImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function () {
-                MainImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function () {
-                MainImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function () {
-                MainImg.src = SmallImg[3].src;
-            }
-
-        </script> -->
         <script type="text/javascript"
             src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
     </div>
