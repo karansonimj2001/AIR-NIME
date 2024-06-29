@@ -75,12 +75,13 @@
         </div>
     </section>
     <section id="form-details">
-        <form action="">
+        <form action="https://api.web3forms.com/submit" method="POST">
             <h2>We Love To Hear From You</h2>
-            <input type="text" placeholder="Your Name">
-            <input type="text" placeholder="E-Mail">
-            <input type="text" placeholder="Subject">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="hidden" name="access_key" value="b573c878-c270-4770-8754-34d7c82c45bb">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="E-Mail" required>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <button class="normal">Submit</button>
         </form>
         <div class="people">
