@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="C:\Users\admin\Downloads\font-awesome-4.7.0\font-awesome-4.7.0\css\font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
     <style>
         .rating i {
             color: gold;
@@ -160,7 +161,7 @@
                 </div>
 
                 <div class="pro" onclick="display('section6')">
-                    <img src="mockups/mitsuri2.png" alt="">
+                    <img src="mockups/Mitsuri2.png" alt="">
                     <img src="mockups/Mitsuri1.png" alt="" class="second-image"> <!-- Second image for hover -->
                     <div class="about">
                         <span>Air-nime</span>
@@ -549,21 +550,54 @@
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
                 <h4 id="codename1">Luffy O-sized T-shirt</h4>
                 <h2>₹649</h2>
-                <select id="size1">
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <select id="colour1">
-                    <option>Select Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Lavender</option>
-                </select>
-                <input id="quantity1" type="number" value="1">
-                <button class="normal" onclick="sendwhatsapp1();">Buy Now</button>
+                <button class="normal" id="mbtn1">Buy Now</button>
+                <div id="modalDialog1" class="modal">
+                    <div class="modal-content animate-top">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Submit Details</h5>
+                            <button type="button" class="close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="fname"><i class="fa fa-user"></i></label>
+                            <input type="text" id="name1" placeholder="Full Name" required style="width: 205px;">
+                            <label for="fname"><i class="fa fa-envelope"></i></label>
+                            <input type="email" id="email1" placeholder="E-Mail" required style="width: 300px;">
+                            <hr>
+                            <select id="size1">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <select id="colour1">
+                                <option>Select Color</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Lavender</option>
+                            </select>
+                            <select id="quantity1">
+                                <option>Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <hr>
+                            <textarea id="address1" cols="78" rows="3" placeholder="Your Address"></textarea>
+                            <input type="text" id="city1" placeholder="City" required style="width: 180px;">                            
+                            <input type="text" id="state1" placeholder="State" required style="width: 200px;">                            
+                            <input type="text" id="pincode1" placeholder="Pincode" required style="width: 150px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="normal" onclick="sendwhatsapp1()">Proceed</button>
+                        </div>
+                    </div>
+                </div>
+            
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -697,22 +731,63 @@
         <script>
             function sendwhatsapp1(){
                 var phonenumber = "919625670484";
-                var Name = document.getElementById("codename1").innerText;
+                var Product_Name = document.getElementById("codename1").innerText;
+                var Name = document.getElementById("name1").value;
+                var EMail = document.getElementById("email1").value;
                 var Size = document.getElementById("size1").value;
                 var Quantity = document.getElementById("quantity1").value;
                 var Color = document.getElementById("colour1").value;
+                var Address = document.getElementById("address1").value;
+                var City= document.getElementById("city1").value;
+                var State = document.getElementById("state1").value;
+                var Pincode = document.getElementById("pincode1").value;
                 var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Product Name :* "+Product_Name+"%0a"
                 +"*Name :* "+Name+"%0a"
+                +"*E-Mail :* "+EMail+"%0a"
                 +"*Size :* "+Size+"%0a"
-                +"*Quantity:* " +Quantity+"%0a"
-                +"*Color :* " +Color+"%0a%0a"
+                +"*Quantity:* "+Quantity+"%0a"
+                +"*Color :* "+Color+"%0a"
+                +"*Address :* "+Address+"%0a"
+                +"*City :* "+City+"%0a"
+                +"*State :* "+State+"%0a"
+                +"*Pincode :* "+Pincode+"%0a%0a"
                 +"*Pls Tell Me About the Availability.*";
                 window.open(url, '_blank').focus();
             }
         </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            // Get the modal
+            var modal1 = $('#modalDialog1');
+
+            // Get the button that opens the modal
+            var btn1 = $("#mbtn1");
+
+            // Get the <span> element that closes the modal
+            var span1 = $(".close");
+
+            $(document).ready(function(){
+                // When the user clicks the button, open the modal 
+                btn1.on('click', function() {
+                    modal1.show();
+                });
+
+               // When the user clicks on <span> (x), close the modal
+                span1.on('click', function() {
+                    modal1.fadeOut();
+                });
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal1.fadeOut();
+                }
+            });
+        </script>
 
     </div>
-
 
 
 
@@ -778,21 +853,53 @@
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
                 <h4 id="codename2">Marco The Phoenix</h4>
                 <h2>₹649</h2>
-                <select id="size2">
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <select id="colour2">
-                    <option>Select Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Lavender</option>
-                </select>
-                <input id="quantity2" type="number" value="1">
-                <button class="normal" onclick="sendwhatsapp2();">Buy Now</button>
+                <button class="normal" id="mbtn2">Buy Now</button>
+                <div id="modalDialog2" class="modal">
+                    <div class="modal-content animate-top">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Submit Details</h5>
+                            <button type="button" class="close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="fname"><i class="fa fa-user"></i></label>
+                            <input type="text" id="name2" placeholder="Full Name" required style="width: 205px;">
+                            <label for="fname"><i class="fa fa-envelope"></i></label>
+                            <input type="email" id="email2" placeholder="E-Mail" required style="width: 300px;">
+                            <hr>
+                            <select id="size2">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <select id="colour2">
+                                <option>Select Color</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Lavender</option>
+                            </select>
+                            <select id="quantity2">
+                                <option>Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <hr>
+                            <textarea id="address2" cols="78" rows="3" placeholder="Your Address"></textarea>
+                            <input type="text" id="city2" placeholder="City" required style="width: 180px;">                            
+                            <input type="text" id="state2" placeholder="State" required style="width: 200px;">                            
+                            <input type="text" id="pincode2" placeholder="Pincode" required style="width: 150px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="normal" onclick="sendwhatsapp2()">Proceed</button>
+                        </div>
+                    </div>
+                </div>
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -922,23 +1029,65 @@
                 <p>© 2024, Air-Nime| All Rights Reserved</p>
             </div>
         </footer>
-                <script>
-                    function sendwhatsapp2(){
-                        var phonenumber = "919625670484";
-                        var Name = document.getElementById("codename2").innerText;
-                        var Size = document.getElementById("size2").value;
-                        var Quantity = document.getElementById("quantity2").value;
-                        var Color = document.getElementById("colour2").value;
-        
-                        var url = "https://wa.me/" + phonenumber + "?text="
-                        +"*Name :* "+Name+"%0a"
-                        +"*Size :* "+Size+"%0a"
-                        +"*Quantity:* " +Quantity+"%0a"
-                        +"*Color :* " +Color+"%0a%0a"
-                        +"*Pls Tell Me About the Availability.*";
-                        window.open(url, '_blank').focus();
-                    }
-                </script>
+        <script>
+            function sendwhatsapp2(){
+                var phonenumber = "919625670484";
+                var Product_Name = document.getElementById("codename2").innerText;
+                var Name = document.getElementById("name2").value;
+                var EMail = document.getElementById("email2").value;
+                var Size = document.getElementById("size2").value;
+                var Quantity = document.getElementById("quantity2").value;
+                var Color = document.getElementById("colour2").value;
+                var Address = document.getElementById("address2").value;
+                var City= document.getElementById("city2").value;
+                var State = document.getElementById("state2").value;
+                var Pincode = document.getElementById("pincode2").value;
+                var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Product Name :* "+Product_Name+"%0a"
+                +"*Name :* "+Name+"%0a"
+                +"*E-Mail :* "+EMail+"%0a"
+                +"*Size :* "+Size+"%0a"
+                +"*Quantity:* "+Quantity+"%0a"
+                +"*Color :* "+Color+"%0a"
+                +"*Address :* "+Address+"%0a"
+                +"*City :* "+City+"%0a"
+                +"*State :* "+State+"%0a"
+                +"*Pincode :* "+Pincode+"%0a%0a"
+                +"*Pls Tell Me About the Availability.*";
+                window.open(url, '_blank').focus();
+            }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            // Get the modal
+            var modal2 = $('#modalDialog2');
+
+            // Get the button that opens the modal
+            var btn2 = $("#mbtn2");
+
+            // Get the <span> element that closes the modal
+            var span2 = $(".close");
+
+            $(document).ready(function(){
+                // When the user clicks the button, open the modal 
+                btn2.on('click', function() {
+                    modal2.show();
+                });
+
+               // When the user clicks on <span> (x), close the modal
+                span2.on('click', function() {
+                    modal2.fadeOut();
+                });
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal2.fadeOut();
+                }
+            });
+        </script>
+
     </div>
 
 
@@ -1002,21 +1151,53 @@
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
                 <h4 id="codename3">Monkey D Luffy</h4>
                 <h2>₹649</h2>
-                <select id="size3">
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <select id="colour3">
-                    <option>Select Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Lavender</option>
-                </select>
-                <input id="quantity3" type="number" value="1">
-                <button class="normal" onclick="sendwhatsapp3();">Buy Now</button>
+                <button class="normal" id="mbtn3">Buy Now</button>
+                <div id="modalDialog3" class="modal">
+                    <div class="modal-content animate-top">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Submit Details</h5>
+                            <button type="button" class="close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="fname"><i class="fa fa-user"></i></label>
+                            <input type="text" id="name3" placeholder="Full Name" required style="width: 205px;">
+                            <label for="fname"><i class="fa fa-envelope"></i></label>
+                            <input type="email" id="email3" placeholder="E-Mail" required style="width: 300px;">
+                            <hr>
+                            <select id="size3">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <select id="colour3">
+                                <option>Select Color</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Lavender</option>
+                            </select>
+                            <select id="quantity3">
+                                <option>Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <hr>
+                            <textarea id="address3" cols="78" rows="3" placeholder="Your Address"></textarea>
+                            <input type="text" id="city3" placeholder="City" required style="width: 180px;">                            
+                            <input type="text" id="state3" placeholder="State" required style="width: 200px;">                            
+                            <input type="text" id="pincode3" placeholder="Pincode" required style="width: 150px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="normal" onclick="sendwhatsapp3()">Proceed</button>
+                        </div>
+                    </div>
+                </div>
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -1149,19 +1330,60 @@
         <script>
             function sendwhatsapp3(){
                 var phonenumber = "919625670484";
-                var Name = document.getElementById("codename3").innerText;
+                var Product_Name = document.getElementById("codename3").innerText;
+                var Name = document.getElementById("name3").value;
+                var EMail = document.getElementById("email3").value;
                 var Size = document.getElementById("size3").value;
                 var Quantity = document.getElementById("quantity3").value;
                 var Color = document.getElementById("colour3").value;
-
+                var Address = document.getElementById("address3").value;
+                var City= document.getElementById("city3").value;
+                var State = document.getElementById("state3").value;
+                var Pincode = document.getElementById("pincode3").value;
                 var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Product Name :* "+Product_Name+"%0a"
                 +"*Name :* "+Name+"%0a"
+                +"*E-Mail :* "+EMail+"%0a"
                 +"*Size :* "+Size+"%0a"
-                +"*Quantity:* " +Quantity+"%0a"
-                +"*Color :* " +Color+"%0a%0a"
+                +"*Quantity:* "+Quantity+"%0a"
+                +"*Color :* "+Color+"%0a"
+                +"*Address :* "+Address+"%0a"
+                +"*City :* "+City+"%0a"
+                +"*State :* "+State+"%0a"
+                +"*Pincode :* "+Pincode+"%0a%0a"
                 +"*Pls Tell Me About the Availability.*";
                 window.open(url, '_blank').focus();
             }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            // Get the modal
+            var modal3 = $('#modalDialog3');
+
+            // Get the button that opens the modal
+            var btn3 = $("#mbtn3");
+
+            // Get the <span> element that closes the modal
+            var span3 = $(".close");
+
+            $(document).ready(function(){
+                // When the user clicks the button, open the modal 
+                btn3.on('click', function() {
+                    modal3.show();
+                });
+
+               // When the user clicks on <span> (x), close the modal
+                span3.on('click', function() {
+                    modal3.fadeOut();
+                });
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal3.fadeOut();
+                }
+            });
         </script>
     </div>
 
@@ -1207,21 +1429,53 @@
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
                 <h4 id="codename4">FEAR NO ONE</h4>
                 <h2>₹649</h2>
-                <select id="size4">
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <select id="colour4">
-                    <option>Select Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Lavender</option>
-                </select>
-                <input id="quantity4" type="number" value="1">
-                <button class="normal" onclick="sendwhatsapp4();">Buy Now</button>
+                <button class="normal" id="mbtn4">Buy Now</button>
+                <div id="modalDialog4" class="modal">
+                    <div class="modal-content animate-top">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Submit Details</h5>
+                            <button type="button" class="close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="fname"><i class="fa fa-user"></i></label>
+                            <input type="text" id="name4" placeholder="Full Name" required style="width: 205px;">
+                            <label for="fname"><i class="fa fa-envelope"></i></label>
+                            <input type="email" id="email4" placeholder="E-Mail" required style="width: 300px;">
+                            <hr>
+                            <select id="size4">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <select id="colour4">
+                                <option>Select Color</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Lavender</option>
+                            </select>
+                            <select id="quantity4">
+                                <option>Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <hr>
+                            <textarea id="address4" cols="78" rows="3" placeholder="Your Address"></textarea>
+                            <input type="text" id="city4" placeholder="City" required style="width: 180px;">                            
+                            <input type="text" id="state4" placeholder="State" required style="width: 200px;">                            
+                            <input type="text" id="pincode4" placeholder="Pincode" required style="width: 150px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="normal" onclick="sendwhatsapp4()">Proceed</button>
+                        </div>
+                    </div>
+                </div>
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -1354,19 +1608,60 @@
         <script>
             function sendwhatsapp4(){
                 var phonenumber = "919625670484";
-                var Name = document.getElementById("codename4").innerText;
+                var Product_Name = document.getElementById("codename4").innerText;
+                var Name = document.getElementById("name4").value;
+                var EMail = document.getElementById("email4").value;
                 var Size = document.getElementById("size4").value;
                 var Quantity = document.getElementById("quantity4").value;
                 var Color = document.getElementById("colour4").value;
-
+                var Address = document.getElementById("address4").value;
+                var City= document.getElementById("city4").value;
+                var State = document.getElementById("state4").value;
+                var Pincode = document.getElementById("pincode4").value;
                 var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Product Name :* "+Product_Name+"%0a"
                 +"*Name :* "+Name+"%0a"
+                +"*E-Mail :* "+EMail+"%0a"
                 +"*Size :* "+Size+"%0a"
-                +"*Quantity:* " +Quantity+"%0a"
-                +"*Color :* " +Color+"%0a%0a"
+                +"*Quantity:* "+Quantity+"%0a"
+                +"*Color :* "+Color+"%0a"
+                +"*Address :* "+Address+"%0a"
+                +"*City :* "+City+"%0a"
+                +"*State :* "+State+"%0a"
+                +"*Pincode :* "+Pincode+"%0a%0a"
                 +"*Pls Tell Me About the Availability.*";
                 window.open(url, '_blank').focus();
             }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            // Get the modal
+            var modal4 = $('#modalDialog4');
+
+            // Get the button that opens the modal
+            var btn4 = $("#mbtn4");
+
+            // Get the <span> element that closes the modal
+            var span4 = $(".close");
+
+            $(document).ready(function(){
+                // When the user clicks the button, open the modal 
+                btn4.on('click', function() {
+                    modal4.show();
+                });
+
+               // When the user clicks on <span> (x), close the modal
+                span4.on('click', function() {
+                    modal4.fadeOut();
+                });
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal4.fadeOut();
+                }
+            });
         </script>
     </div>
 
@@ -1411,21 +1706,53 @@
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
                 <h4 id="codename5">Goku O-sized T-Shirt</h4>
                 <h2>₹649</h2>
-                <select id="size5">
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <select id="colour5">
-                    <option>Select Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Lavender</option>
-                </select>
-                <input id="quantity5" type="number" value="1">
-                <button class="normal" onclick="sendwhatsapp5();">Buy Now</button>
+                <button class="normal" id="mbtn5">Buy Now</button>
+                <div id="modalDialog5" class="modal">
+                    <div class="modal-content animate-top">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Submit Details</h5>
+                            <button type="button" class="close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="fname"><i class="fa fa-user"></i></label>
+                            <input type="text" id="name5" placeholder="Full Name" required style="width: 205px;">
+                            <label for="fname"><i class="fa fa-envelope"></i></label>
+                            <input type="email" id="email5" placeholder="E-Mail" required style="width: 300px;">
+                            <hr>
+                            <select id="size5">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <select id="colour5">
+                                <option>Select Color</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Lavender</option>
+                            </select>
+                            <select id="quantity5">
+                                <option>Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <hr>
+                            <textarea id="address5" cols="78" rows="3" placeholder="Your Address"></textarea>
+                            <input type="text" id="city5" placeholder="City" required style="width: 180px;">                            
+                            <input type="text" id="state5" placeholder="State" required style="width: 200px;">                            
+                            <input type="text" id="pincode5" placeholder="Pincode" required style="width: 150px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="normal" onclick="sendwhatsapp5()">Proceed</button>
+                        </div>
+                    </div>
+                </div>
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -1558,19 +1885,60 @@
         <script>
             function sendwhatsapp5(){
                 var phonenumber = "919625670484";
-                var Name = document.getElementById("codename5").innerText;
+                var Product_Name = document.getElementById("codename5").innerText;
+                var Name = document.getElementById("name5").value;
+                var EMail = document.getElementById("email5").value;
                 var Size = document.getElementById("size5").value;
                 var Quantity = document.getElementById("quantity5").value;
                 var Color = document.getElementById("colour5").value;
-
+                var Address = document.getElementById("address5").value;
+                var City= document.getElementById("city5").value;
+                var State = document.getElementById("state5").value;
+                var Pincode = document.getElementById("pincode5").value;
                 var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Product Name :* "+Product_Name+"%0a"
                 +"*Name :* "+Name+"%0a"
+                +"*E-Mail :* "+EMail+"%0a"
                 +"*Size :* "+Size+"%0a"
-                +"*Quantity:* " +Quantity+"%0a"
-                +"*Color :* " +Color+"%0a%0a"
+                +"*Quantity:* "+Quantity+"%0a"
+                +"*Color :* "+Color+"%0a"
+                +"*Address :* "+Address+"%0a"
+                +"*City :* "+City+"%0a"
+                +"*State :* "+State+"%0a"
+                +"*Pincode :* "+Pincode+"%0a%0a"
                 +"*Pls Tell Me About the Availability.*";
                 window.open(url, '_blank').focus();
             }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            // Get the modal
+            var modal5 = $('#modalDialog5');
+
+            // Get the button that opens the modal
+            var btn5 = $("#mbtn5");
+
+            // Get the <span> element that closes the modal
+            var span5 = $(".close");
+
+            $(document).ready(function(){
+                // When the user clicks the button, open the modal 
+                btn5.on('click', function() {
+                    modal5.show();
+                });
+
+               // When the user clicks on <span> (x), close the modal
+                span5.on('click', function() {
+                    modal5.fadeOut();
+                });
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal5.fadeOut();
+                }
+            });
         </script>
     </div>
 
@@ -1614,21 +1982,53 @@
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
                 <h4 id="codename6">Mitsuri O-sized T-Shirt</h4>
                 <h2>₹649</h2>
-                <select id="size6">
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <select id="colour6">
-                    <option>Select Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Lavender</option>
-                </select>
-                <input id="quantity6" type="number" value="1">
-                <button class="normal" onclick="sendwhatsapp6();">Buy Now</button>
+                <button class="normal" id="mbtn6">Buy Now</button>
+                <div id="modalDialog6" class="modal">
+                    <div class="modal-content animate-top">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Submit Details</h5>
+                            <button type="button" class="close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="fname"><i class="fa fa-user"></i></label>
+                            <input type="text" id="name6" placeholder="Full Name" required style="width: 205px;">
+                            <label for="fname"><i class="fa fa-envelope"></i></label>
+                            <input type="email" id="email6" placeholder="E-Mail" required style="width: 300px;">
+                            <hr>
+                            <select id="size6">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <select id="colour6">
+                                <option>Select Color</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Lavender</option>
+                            </select>
+                            <select id="quantity6">
+                                <option>Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <hr>
+                            <textarea id="address6" cols="78" rows="3" placeholder="Your Address"></textarea>
+                            <input type="text" id="city6" placeholder="City" required style="width: 180px;">                            
+                            <input type="text" id="state6" placeholder="State" required style="width: 200px;">                            
+                            <input type="text" id="pincode6" placeholder="Pincode" required style="width: 150px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="normal" onclick="sendwhatsapp6()">Proceed</button>
+                        </div>
+                    </div>
+                </div>    
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -1761,19 +2161,60 @@
         <script>
             function sendwhatsapp6(){
                 var phonenumber = "919625670484";
-                var Name = document.getElementById("codename6").innerText;
+                var Product_Name = document.getElementById("codename6").innerText;
+                var Name = document.getElementById("name6").value;
+                var EMail = document.getElementById("email6").value;
                 var Size = document.getElementById("size6").value;
                 var Quantity = document.getElementById("quantity6").value;
                 var Color = document.getElementById("colour6").value;
-
+                var Address = document.getElementById("address6").value;
+                var City= document.getElementById("city6").value;
+                var State = document.getElementById("state6").value;
+                var Pincode = document.getElementById("pincode6").value;
                 var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Product Name :* "+Product_Name+"%0a"
                 +"*Name :* "+Name+"%0a"
+                +"*E-Mail :* "+EMail+"%0a"
                 +"*Size :* "+Size+"%0a"
-                +"*Quantity:* " +Quantity+"%0a"
-                +"*Color :* " +Color+"%0a%0a"
+                +"*Quantity:* "+Quantity+"%0a"
+                +"*Color :* "+Color+"%0a"
+                +"*Address :* "+Address+"%0a"
+                +"*City :* "+City+"%0a"
+                +"*State :* "+State+"%0a"
+                +"*Pincode :* "+Pincode+"%0a%0a"
                 +"*Pls Tell Me About the Availability.*";
                 window.open(url, '_blank').focus();
             }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            // Get the modal
+            var modal6 = $('#modalDialog6');
+
+            // Get the button that opens the modal
+            var btn6 = $("#mbtn6");
+
+            // Get the <span> element that closes the modal
+            var span6 = $(".close");
+
+            $(document).ready(function(){
+                // When the user clicks the button, open the modal 
+                btn6.on('click', function() {
+                    modal6.show();
+                });
+
+               // When the user clicks on <span> (x), close the modal
+                span6.on('click', function() {
+                    modal6.fadeOut();
+                });
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal6.fadeOut();
+                }
+            });
         </script>
     </div>
 
@@ -1816,21 +2257,53 @@
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
                 <h4 id="codename7">Luffy Gear2 O-sized T-Shirt</h4>
                 <h2>₹649</h2>
-                <select id="size7">
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <select id="colour7">
-                    <option>Select Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Lavender</option>
-                </select>
-                <input id="quantity7" type="number" value="1">
-                <button class="normal" onclick="sendwhatsapp7();">Buy Now</button>
+                <button class="normal" id="mbtn7">Buy Now</button>
+                <div id="modalDialog7" class="modal">
+                    <div class="modal-content animate-top">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Submit Details</h5>
+                            <button type="button" class="close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="fname"><i class="fa fa-user"></i></label>
+                            <input type="text" id="name7" placeholder="Full Name" required style="width: 205px;">
+                            <label for="fname"><i class="fa fa-envelope"></i></label>
+                            <input type="email" id="email7" placeholder="E-Mail" required style="width: 300px;">
+                            <hr>
+                            <select id="size7">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <select id="colour7">
+                                <option>Select Color</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Lavender</option>
+                            </select>
+                            <select id="quantity7">
+                                <option>Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <hr>
+                            <textarea id="address7" cols="78" rows="3" placeholder="Your Address"></textarea>
+                            <input type="text" id="city7" placeholder="City" required style="width: 180px;">                            
+                            <input type="text" id="state7" placeholder="State" required style="width: 200px;">                            
+                            <input type="text" id="pincode7" placeholder="Pincode" required style="width: 150px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="normal" onclick="sendwhatsapp7()">Proceed</button>
+                        </div>
+                    </div>
+                </div>
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -1963,19 +2436,60 @@
         <script>
             function sendwhatsapp7(){
                 var phonenumber = "919625670484";
-                var Name = document.getElementById("codename7").innerText;
+                var Product_Name = document.getElementById("codename7").innerText;
+                var Name = document.getElementById("name7").value;
+                var EMail = document.getElementById("email7").value;
                 var Size = document.getElementById("size7").value;
                 var Quantity = document.getElementById("quantity7").value;
                 var Color = document.getElementById("colour7").value;
-
+                var Address = document.getElementById("address7").value;
+                var City= document.getElementById("city7").value;
+                var State = document.getElementById("state7").value;
+                var Pincode = document.getElementById("pincode7").value;
                 var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Product Name :* "+Product_Name+"%0a"
                 +"*Name :* "+Name+"%0a"
+                +"*E-Mail :* "+EMail+"%0a"
                 +"*Size :* "+Size+"%0a"
-                +"*Quantity:* " +Quantity+"%0a"
-                +"*Color :* " +Color+"%0a%0a"
+                +"*Quantity:* "+Quantity+"%0a"
+                +"*Color :* "+Color+"%0a"
+                +"*Address :* "+Address+"%0a"
+                +"*City :* "+City+"%0a"
+                +"*State :* "+State+"%0a"
+                +"*Pincode :* "+Pincode+"%0a%0a"
                 +"*Pls Tell Me About the Availability.*";
                 window.open(url, '_blank').focus();
             }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            // Get the modal
+            var modal7 = $('#modalDialog7');
+
+            // Get the button that opens the modal
+            var btn7 = $("#mbtn7");
+
+            // Get the <span> element that closes the modal
+            var span7 = $(".close");
+
+            $(document).ready(function(){
+                // When the user clicks the button, open the modal 
+                btn7.on('click', function() {
+                    modal7.show();
+                });
+
+               // When the user clicks on <span> (x), close the modal
+                span7.on('click', function() {
+                    modal7.fadeOut();
+                });
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal7.fadeOut();
+                }
+            });
         </script>
     </div>
 
@@ -2020,21 +2534,53 @@
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
                 <h4 id="codename8">Chaos O-sized T-Shirt</h4>
                 <h2>₹649</h2>
-                <select id="size8">
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <select id="colour8">
-                    <option>Select Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Lavender</option>
-                </select>
-                <input id="quantity8" type="number" value="1">
-                <button class="normal" onclick="sendwhatsapp8();">Buy Now</button>
+                <button class="normal" id="mbtn8">Buy Now</button>
+                <div id="modalDialog8" class="modal">
+                    <div class="modal-content animate-top">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Submit Details</h5>
+                            <button type="button" class="close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="fname"><i class="fa fa-user"></i></label>
+                            <input type="text" id="name8" placeholder="Full Name" required style="width: 205px;">
+                            <label for="fname"><i class="fa fa-envelope"></i></label>
+                            <input type="email" id="email8" placeholder="E-Mail" required style="width: 300px;">
+                            <hr>
+                            <select id="size8">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <select id="colour8">
+                                <option>Select Color</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Lavender</option>
+                            </select>
+                            <select id="quantity8">
+                                <option>Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <hr>
+                            <textarea id="address8" cols="78" rows="3" placeholder="Your Address"></textarea>
+                            <input type="text" id="city8" placeholder="City" required style="width: 180px;">                            
+                            <input type="text" id="state8" placeholder="State" required style="width: 200px;">                            
+                            <input type="text" id="pincode8" placeholder="Pincode" required style="width: 150px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="normal" onclick="sendwhatsapp8()">Proceed</button>
+                        </div>
+                    </div>
+                </div>
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -2167,19 +2713,60 @@
         <script>
             function sendwhatsapp8(){
                 var phonenumber = "919625670484";
-                var Name = document.getElementById("codename8").innerText;
+                var Product_Name = document.getElementById("codename8").innerText;
+                var Name = document.getElementById("name8").value;
+                var EMail = document.getElementById("email8").value;
                 var Size = document.getElementById("size8").value;
                 var Quantity = document.getElementById("quantity8").value;
                 var Color = document.getElementById("colour8").value;
-
+                var Address = document.getElementById("address8").value;
+                var City= document.getElementById("city8").value;
+                var State = document.getElementById("state8").value;
+                var Pincode = document.getElementById("pincode8").value;
                 var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Product Name :* "+Product_Name+"%0a"
                 +"*Name :* "+Name+"%0a"
+                +"*E-Mail :* "+EMail+"%0a"
                 +"*Size :* "+Size+"%0a"
-                +"*Quantity:* " +Quantity+"%0a"
-                +"*Color :* " +Color+"%0a%0a"
+                +"*Quantity:* "+Quantity+"%0a"
+                +"*Color :* "+Color+"%0a"
+                +"*Address :* "+Address+"%0a"
+                +"*City :* "+City+"%0a"
+                +"*State :* "+State+"%0a"
+                +"*Pincode :* "+Pincode+"%0a%0a"
                 +"*Pls Tell Me About the Availability.*";
                 window.open(url, '_blank').focus();
             }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            // Get the modal
+            var modal8 = $('#modalDialog8');
+
+            // Get the button that opens the modal
+            var btn8 = $("#mbtn8");
+
+            // Get the <span> element that closes the modal
+            var span8 = $(".close");
+
+            $(document).ready(function(){
+                // When the user clicks the button, open the modal 
+                btn8.on('click', function() {
+                    modal8.show();
+                });
+
+               // When the user clicks on <span> (x), close the modal
+                span8.on('click', function() {
+                    modal8.fadeOut();
+                });
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal8.fadeOut();
+                }
+            });
         </script>
     </div>
 
@@ -2223,21 +2810,53 @@
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
                 <h4 id="codename9">Itachi O-sized T-Shirt</h4>
                 <h2>₹649</h2>
-                <select id="size9">
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <select id="colour9">
-                    <option>Select Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Lavender</option>
-                </select>
-                <input id="quantity9" type="number" value="1">
-                <button class="normal" onclick="sendwhatsapp9();">Buy Now</button>
+                <button class="normal" id="mbtn9">Buy Now</button>
+                <div id="modalDialog9" class="modal">
+                    <div class="modal-content animate-top">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Submit Details</h5>
+                            <button type="button" class="close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="fname"><i class="fa fa-user"></i></label>
+                            <input type="text" id="name9" placeholder="Full Name" required style="width: 205px;">
+                            <label for="fname"><i class="fa fa-envelope"></i></label>
+                            <input type="email" id="email9" placeholder="E-Mail" required style="width: 300px;">
+                            <hr>
+                            <select id="size9">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <select id="colour9">
+                                <option>Select Color</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Lavender</option>
+                            </select>
+                            <select id="quantity9">
+                                <option>Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <hr>
+                            <textarea id="address9" cols="78" rows="3" placeholder="Your Address"></textarea>
+                            <input type="text" id="city9" placeholder="City" required style="width: 180px;">                            
+                            <input type="text" id="state9" placeholder="State" required style="width: 200px;">                            
+                            <input type="text" id="pincode9" placeholder="Pincode" required style="width: 150px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="normal" onclick="sendwhatsapp9()">Proceed</button>
+                        </div>
+                    </div>
+                </div>
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -2370,19 +2989,60 @@
         <script>
             function sendwhatsapp9(){
                 var phonenumber = "919625670484";
-                var Name = document.getElementById("codename9").innerText;
+                var Product_Name = document.getElementById("codename9").innerText;
+                var Name = document.getElementById("name9").value;
+                var EMail = document.getElementById("email9").value;
                 var Size = document.getElementById("size9").value;
                 var Quantity = document.getElementById("quantity9").value;
                 var Color = document.getElementById("colour9").value;
-
+                var Address = document.getElementById("address9").value;
+                var City= document.getElementById("city9").value;
+                var State = document.getElementById("state9").value;
+                var Pincode = document.getElementById("pincode9").value;
                 var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Product Name :* "+Product_Name+"%0a"
                 +"*Name :* "+Name+"%0a"
+                +"*E-Mail :* "+EMail+"%0a"
                 +"*Size :* "+Size+"%0a"
-                +"*Quantity:* " +Quantity+"%0a"
-                +"*Color :* " +Color+"%0a%0a"
+                +"*Quantity:* "+Quantity+"%0a"
+                +"*Color :* "+Color+"%0a"
+                +"*Address :* "+Address+"%0a"
+                +"*City :* "+City+"%0a"
+                +"*State :* "+State+"%0a"
+                +"*Pincode :* "+Pincode+"%0a%0a"
                 +"*Pls Tell Me About the Availability.*";
                 window.open(url, '_blank').focus();
             }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            // Get the modal
+            var modal9 = $('#modalDialog9');
+
+            // Get the button that opens the modal
+            var btn9 = $("#mbtn9");
+
+            // Get the <span> element that closes the modal
+            var span9 = $(".close");
+
+            $(document).ready(function(){
+                // When the user clicks the button, open the modal 
+                btn9.on('click', function() {
+                    modal9.show();
+                });
+
+               // When the user clicks on <span> (x), close the modal
+                span9.on('click', function() {
+                    modal9.fadeOut();
+                });
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal9.fadeOut();
+                }
+            });
         </script>
     </div>
 
@@ -2426,21 +3086,53 @@
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
                 <h4 id="codename10">Shinobu O-sized T-Shirt</h4>
                 <h2>₹649</h2>
-                <select id="size10">
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <select id="colour10">
-                    <option>Select Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Lavender</option>
-                </select>
-                <input id="quantity10" type="number" value="1">
-                <button class="normal" onclick="sendwhatsapp10();">Buy Now</button>
+                <button class="normal" id="mbtn10">Buy Now</button>
+                <div id="modalDialog10" class="modal">
+                    <div class="modal-content animate-top">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Submit Details</h5>
+                            <button type="button" class="close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="fname"><i class="fa fa-user"></i></label>
+                            <input type="text" id="name10" placeholder="Full Name" required style="width: 205px;">
+                            <label for="fname"><i class="fa fa-envelope"></i></label>
+                            <input type="email" id="email10" placeholder="E-Mail" required style="width: 300px;">
+                            <hr>
+                            <select id="size10">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <select id="colour10">
+                                <option>Select Color</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Lavender</option>
+                            </select>
+                            <select id="quantity10">
+                                <option>Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <hr>
+                            <textarea id="address10" cols="78" rows="3" placeholder="Your Address"></textarea>
+                            <input type="text" id="city10" placeholder="City" required style="width: 180px;">                            
+                            <input type="text" id="state10" placeholder="State" required style="width: 200px;">                            
+                            <input type="text" id="pincode10" placeholder="Pincode" required style="width: 150px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="normal" onclick="sendwhatsapp10()">Proceed</button>
+                        </div>
+                    </div>
+                </div>
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -2573,19 +3265,60 @@
         <script>
             function sendwhatsapp10(){
                 var phonenumber = "919625670484";
-                var Name = document.getElementById("codename10").innerText;
+                var Product_Name = document.getElementById("codename10").innerText;
+                var Name = document.getElementById("name10").value;
+                var EMail = document.getElementById("email10").value;
                 var Size = document.getElementById("size10").value;
                 var Quantity = document.getElementById("quantity10").value;
                 var Color = document.getElementById("colour10").value;
-
+                var Address = document.getElementById("address10").value;
+                var City= document.getElementById("city10").value;
+                var State = document.getElementById("state10").value;
+                var Pincode = document.getElementById("pincode10").value;
                 var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Product Name :* "+Product_Name+"%0a"
                 +"*Name :* "+Name+"%0a"
+                +"*E-Mail :* "+EMail+"%0a"
                 +"*Size :* "+Size+"%0a"
-                +"*Quantity:* " +Quantity+"%0a"
-                +"*Color :* " +Color+"%0a%0a"
+                +"*Quantity:* "+Quantity+"%0a"
+                +"*Color :* "+Color+"%0a"
+                +"*Address :* "+Address+"%0a"
+                +"*City :* "+City+"%0a"
+                +"*State :* "+State+"%0a"
+                +"*Pincode :* "+Pincode+"%0a%0a"
                 +"*Pls Tell Me About the Availability.*";
                 window.open(url, '_blank').focus();
             }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            // Get the modal
+            var modal10 = $('#modalDialog10');
+
+            // Get the button that opens the modal
+            var btn10 = $("#mbtn10");
+
+            // Get the <span> element that closes the modal
+            var span10 = $(".close");
+
+            $(document).ready(function(){
+                // When the user clicks the button, open the modal 
+                btn10.on('click', function() {
+                    modal10.show();
+                });
+
+               // When the user clicks on <span> (x), close the modal
+                span10.on('click', function() {
+                    modal10.fadeOut();
+                });
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal10.fadeOut();
+                }
+            });
         </script>
     </div>
 
@@ -2630,21 +3363,54 @@
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
                 <h4 id="codename11">Pain O-sized T-Shirt</h4>
                 <h2>₹649</h2>
-                <select id="size11">
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <select id="colour11">
-                    <option>Select Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Lavender</option>
-                </select>
-                <input id="quantity11" type="number" value="1">
-                <button class="normal" onclick="sendwhatsapp11();">Buy Now</button>
+                <button class="normal" id="mbtn11">Buy Now</button>
+                <div id="modalDialog11" class="modal">
+                    <div class="modal-content animate-top">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Submit Details</h5>
+                            <button type="button" class="close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="fname"><i class="fa fa-user"></i></label>
+                            <input type="text" id="name11" placeholder="Full Name" required style="width: 205px;">
+                            <label for="fname"><i class="fa fa-envelope"></i></label>
+                            <input type="email" id="email11" placeholder="E-Mail" required style="width: 300px;">
+                            <hr>
+                            <select id="size11">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <select id="colour11">
+                                <option>Select Color</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Lavender</option>
+                            </select>
+                            <select id="quantity11">
+                                <option>Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <hr>
+                            <textarea id="address11" cols="78" rows="3" placeholder="Your Address"></textarea>
+                            <input type="text" id="city11" placeholder="City" required style="width: 180px;">                            
+                            <input type="text" id="state11" placeholder="State" required style="width: 200px;">                            
+                            <input type="text" id="pincode11" placeholder="Pincode" required style="width: 150px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="normal" onclick="sendwhatsapp11()">Proceed</button>
+                        </div>
+                    </div>
+                </div>
+
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -2777,19 +3543,60 @@
         <script>
             function sendwhatsapp11(){
                 var phonenumber = "919625670484";
-                var Name = document.getElementById("codename11").innerText;
+                var Product_Name = document.getElementById("codename11").innerText;
+                var Name = document.getElementById("name11").value;
+                var EMail = document.getElementById("email11").value;
                 var Size = document.getElementById("size11").value;
                 var Quantity = document.getElementById("quantity11").value;
                 var Color = document.getElementById("colour11").value;
-
+                var Address = document.getElementById("address11").value;
+                var City= document.getElementById("city11").value;
+                var State = document.getElementById("state11").value;
+                var Pincode = document.getElementById("pincode11").value;
                 var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Product Name :* "+Product_Name+"%0a"
                 +"*Name :* "+Name+"%0a"
+                +"*E-Mail :* "+EMail+"%0a"
                 +"*Size :* "+Size+"%0a"
-                +"*Quantity:* " +Quantity+"%0a"
-                +"*Color :* " +Color+"%0a%0a"
+                +"*Quantity:* "+Quantity+"%0a"
+                +"*Color :* "+Color+"%0a"
+                +"*Address :* "+Address+"%0a"
+                +"*City :* "+City+"%0a"
+                +"*State :* "+State+"%0a"
+                +"*Pincode :* "+Pincode+"%0a%0a"
                 +"*Pls Tell Me About the Availability.*";
                 window.open(url, '_blank').focus();
             }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            // Get the modal
+            var modal11 = $('#modalDialog11');
+
+            // Get the button that opens the modal
+            var btn11 = $("#mbtn11");
+
+            // Get the <span> element that closes the modal
+            var span11 = $(".close");
+
+            $(document).ready(function(){
+                // When the user clicks the button, open the modal 
+                btn11.on('click', function() {
+                    modal11.show();
+                });
+
+               // When the user clicks on <span> (x), close the modal
+                span11.on('click', function() {
+                    modal11.fadeOut();
+                });
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal11.fadeOut();
+                }
+            });
         </script>
     </div>
 
@@ -2820,7 +3627,7 @@
         </section>
         <section id="Prodetails" class="section-p1">
             <div class="single-pro-img">
-                <img src="mockups/Kuko2.png" width="100%" id="MainImg" alt="">
+                <img src="mockups/kanao 2.png" width="100%" id="MainImg" alt="">
                 <div class="sub-img-group">
                     <div class="sub-img" >
                         <img src="mockups/Kuko1.png" width="100%" class="sub-img" alt="">
@@ -2834,21 +3641,54 @@
                 <h6><a href="index.html">Home</a>/T-Shirt</h6>
                 <h4 id="codename12">kokushibo O-sized T-Shirt</h4>
                 <h2>₹649</h2>
-                <select id="size12">
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-                <select id="colour12">
-                    <option>Select Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Lavender</option>
-                </select>
-                <input id="quantity12" type="number" value="1">
-                <button class="normal" onclick="sendwhatsapp12();">Buy Now</button>
+                <button class="normal" id="mbtn12">Buy Now</button>
+                <div id="modalDialog12" class="modal">
+                    <div class="modal-content animate-top">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Submit Details</h5>
+                            <button type="button" class="close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="fname"><i class="fa fa-user"></i></label>
+                            <input type="text" id="name12" placeholder="Full Name" required style="width: 205px;">
+                            <label for="fname"><i class="fa fa-envelope"></i></label>
+                            <input type="email" id="email12" placeholder="E-Mail" required style="width: 300px;">
+                            <hr>
+                            <select id="size12">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <select id="colour12">
+                                <option>Select Color</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Lavender</option>
+                            </select>
+                            <select id="quantity12">
+                                <option>Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <hr>
+                            <textarea id="address12" cols="78" rows="3" placeholder="Your Address"></textarea>
+                            <input type="text" id="city12" placeholder="City" required style="width: 180px;">                            
+                            <input type="text" id="state12" placeholder="State" required style="width: 200px;">                            
+                            <input type="text" id="pincode12" placeholder="Pincode" required style="width: 150px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="normal" onclick="sendwhatsapp12()">Proceed</button>
+                        </div>
+                    </div>
+                </div>
+
                 <h4>Product Details</h4>
                 <div class="col1">
                     <p>✦ 100 % cotton</p>
@@ -2981,19 +3821,60 @@
         <script>
             function sendwhatsapp12(){
                 var phonenumber = "919625670484";
-                var Name = document.getElementById("codename12").innerText;
+                var Product_Name = document.getElementById("codename12").innerText;
+                var Name = document.getElementById("name12").value;
+                var EMail = document.getElementById("email12").value;
                 var Size = document.getElementById("size12").value;
                 var Quantity = document.getElementById("quantity12").value;
                 var Color = document.getElementById("colour12").value;
-
+                var Address = document.getElementById("address12").value;
+                var City= document.getElementById("city12").value;
+                var State = document.getElementById("state12").value;
+                var Pincode = document.getElementById("pincode12").value;
                 var url = "https://wa.me/" + phonenumber + "?text="
+                +"*Product Name :* "+Product_Name+"%0a"
                 +"*Name :* "+Name+"%0a"
+                +"*E-Mail :* "+EMail+"%0a"
                 +"*Size :* "+Size+"%0a"
-                +"*Quantity:* " +Quantity+"%0a"
-                +"*Color :* " +Color+"%0a%0a"
+                +"*Quantity:* "+Quantity+"%0a"
+                +"*Color :* "+Color+"%0a"
+                +"*Address :* "+Address+"%0a"
+                +"*City :* "+City+"%0a"
+                +"*State :* "+State+"%0a"
+                +"*Pincode :* "+Pincode+"%0a%0a"
                 +"*Pls Tell Me About the Availability.*";
                 window.open(url, '_blank').focus();
             }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            // Get the modal
+            var modal12 = $('#modalDialog12');
+
+            // Get the button that opens the modal
+            var btn12 = $("#mbtn12");
+
+            // Get the <span> element that closes the modal
+            var span12 = $(".close");
+
+            $(document).ready(function(){
+                // When the user clicks the button, open the modal 
+                btn12.on('click', function() {
+                    modal12.show();
+                });
+
+               // When the user clicks on <span> (x), close the modal
+                span12.on('click', function() {
+                    modal12.fadeOut();
+                });
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal12.fadeOut();
+                }
+            });
         </script>
     </div>
 
