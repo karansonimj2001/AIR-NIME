@@ -29,8 +29,8 @@
     opacity: 1;
 }
 body {
-    background-image: url("wal4.png");
-}
+    background-image: url('wal4.png'); /* Replace with your background image */
+  }
 
 #Products .pro .about .amount {
     display: inline-block;
